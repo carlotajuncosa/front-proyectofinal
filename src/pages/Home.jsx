@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "../componentes/Map";
 
 const Home = () => {
   return (
@@ -13,10 +14,22 @@ const Home = () => {
       <video className="home_video" loop autoPlay muted>
         <source src="/assets/video.mp4" type="video/mp4" />
       </video>
-      
+        <button>Pide cita</button>
+
       <div>
-        {/* poner iconos */}
+      <img src="" alt=""></img>
+      <img src="" alt=""></img>
+      <img src="" alt=""></img>
+      <img src="" alt=""></img>
+      <img src="" alt=""></img>
+      <img src="" alt=""></img>
       </div>
+
+      <div>Destacado videoconsulta
+      <button>Pide cita</button>
+      </div>
+
+      <Map/>
     </div>
   );
 };
