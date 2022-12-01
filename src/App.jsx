@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Centro from "./pages/Centro";
 import Especialidades from "./pages/Especialidades";
 import CuadroMedico from "./pages/CuadroMedico";
-import Areadiagnostica from "./pages/Areadiagnostica";
+import Areadiagnostica from "./pages/AreaDiagnostica";
 import AreaCliente from "./pages/AreaCliente";
 import PedirCita from "./pages/PedirCita";
 import Contacto from "./pages/Contacto";
