@@ -9,7 +9,7 @@ const AreaCliente = () => {
 
   return (
     <>
-      {!user && <FormLogin type="login" /> && <FormLogin type="register"/>}
+      {!user && <FormLogin type="login" />}
       {user && (
         <>
           <div className="client">

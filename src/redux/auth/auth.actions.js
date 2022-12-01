@@ -17,6 +17,8 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
     const result = await API.post("users/login", formdata);
     dispatch({ type: "login_user_ok", payload: result.data });
     localStorage.setItem("token", result.data.token);
+    localStorage.setItem("user", result.data.userDB.username);
+    localStorage.setItem("userId", result.data.userDB._id);
     navigate("/");
   } catch (error) {
     dispatch({ type: "login_user_error", payload: error.message });
@@ -39,7 +41,6 @@ export const checkSession = (token, navigate) => async (dispatch) => {
   } catch (error) {
     dispatch({ type: "checkSession_error" });
     localStorage.removeItem("token");
-    localStorage.clear();
     navigate("/login");
   }
 };
@@ -51,7 +52,8 @@ export const logoutUser = (navigate) => async (dispatch) => {
       type: "logout_user_ok",
     });
 
-    localStorage.clear();
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     navigate("/login");
   } catch (error) {
     dispatch({ type: "logout_user_error", payload: error.message });

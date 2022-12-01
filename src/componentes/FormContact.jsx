@@ -8,15 +8,20 @@ const FormContact = () => {
     handleSubmit, 
     formState: {errors, isValid},
   } = useForm();
+
+  const contact = (data) => {
+    //* AQUÏ VA EL DISPATCH
+    //! IMPLEMENTAR CON EL SERVIDOR DE CORREO
+  }
   return (
     <div className="formContact">
-    <form>
-      <h2>Hola, ¿cómo podemos ayudarte?</h2>
-      <h3>Estamos aquí para ayudarte y te responderemos dentro de las siguientes 24 horas.</h3>
-      {/* <form onSubmit={handleSubmit(login)}> */}
+    <form onSubmit={handleSubmit(contact)} className="formContact__form">
+      <h2 className="formContact__h2">Hola, ¿cómo podemos ayudarte?</h2>
+      <h3 className="formContact__h3">Estamos aquí para ayudarte y te responderemos dentro de las siguientes 24 horas.</h3>
+      
       {/* NOMBRE */}
-      <label htmlFor="name">Nombre</label>
-      <input
+      <label className="formContact__label" htmlFor="name">Nombre</label>
+      <input className="formContact__input"
         type="text"
         name="name"
         id="name"
@@ -40,8 +45,8 @@ const FormContact = () => {
         </>
       ) : null}
       {/* TELEFONO */}
-      <label htmlFor="phone">Teléfono</label>
-      <input
+      <label className="formContact__label" htmlFor="phone">Teléfono</label>
+      <input className="formContact__input"
         type="tel"
         name="phone"
         id="phone"
@@ -65,8 +70,8 @@ const FormContact = () => {
         </>
       ) : null}
       {/* EMAIL */}
-      <label htmlFor="email">Email</label>
-      <input
+      <label className="formContact__label" htmlFor="email">Email</label>
+      <input className="formContact__input"
         type="email"
         name="email"
         id="email"
@@ -90,8 +95,9 @@ const FormContact = () => {
         </>
       ) : null}
       {/* TEXT AREA CONSULTA */}
-      <label htmlFor="textarea">Cuéntanos lo que necesitas</label>
+      <label className="formContact__label" htmlFor="textarea">Cuéntanos lo que necesitas</label>
       <textarea
+        className="formContact__textArea"
         rows="5" cols="20"
         type="textarea"
         name="textarea"
@@ -115,7 +121,7 @@ const FormContact = () => {
         </>
       ) : null}
       
-      <button type="submit" disabled={!isValid}>
+      <button className="formContact__button" type="submit" disabled={!isValid}>
         Enviar
       </button>
     </form>
