@@ -5,7 +5,7 @@ import FormAppointment from "../componentes/FormAppointment";
 const PedirCita = () => {
   const user = localStorage.user;
   return (
-    <>
+    <> 
       {!user && (
         <>
           <h2>¿Aún no eres cliente?</h2>

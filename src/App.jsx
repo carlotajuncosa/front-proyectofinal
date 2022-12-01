@@ -5,12 +5,23 @@ import Home from "./pages/Home";
 import Centro from "./pages/Centro";
 import Especialidades from "./pages/Especialidades";
 import CuadroMedico from "./pages/CuadroMedico";
-import Areadiagnostica from "./pages/AreaDiagnostica";
+import Areadiagnostica from "./pages/Areadiagnostica";
 import AreaCliente from "./pages/AreaCliente";
 import PedirCita from "./pages/PedirCita";
 import Contacto from "./pages/Contacto";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { checkSession } from "./redux/auth/auth.actions";
+import { useNavigate } from "react-router-dom/dist";
 
 function App() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token');
+  useEffect(() => {
+    token && dispatch(checkSession(token, navigate))
+  }, []);
+
   return (
     <div className="App">
       <Header />

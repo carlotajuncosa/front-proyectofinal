@@ -3,9 +3,10 @@ import FormLogin from "../componentes/FormLogin";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ButtonLogout from "../componentes/ButtonLogout";
+import { useSelector } from "react-redux";
 
 const AreaCliente = () => {
-  const user = localStorage.user;
+  const {user, token} = useSelector((state) => state.auth)
 
   return (
     <>
