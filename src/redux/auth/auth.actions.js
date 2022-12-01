@@ -1,4 +1,4 @@
-import { API } from "../../shared/services/api";
+import { API } from "../shared/services/api";
 
 export const newUser = (formdata, navigate) => async (dispatch) => {
   dispatch({ type: "register_user_start" });

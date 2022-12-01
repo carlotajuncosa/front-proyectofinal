@@ -1,10 +1,47 @@
-import React from 'react'
+import React from "react";
+import FormLogin from "../componentes/FormLogin";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import ButtonLogout from "../componentes/ButtonLogout";
 
 const AreaCliente = () => {
-  return (
-    <div>Componente formulario acceso / login</div>
-    /* aquí useState para que seleccione un form u otro */
-  )
-}
+  const user = localStorage.user;
 
-export default AreaCliente
+  return (
+    <>
+      {!user && <FormLogin type="login" /> && <FormLogin type="register"/>}
+      {user && (
+        <>
+          <div className="client">
+            <nav className="client__nav">
+              <NavLink
+                activeclassname={"active"}
+                to="/user/client/{:id}/consulta-online"
+                className="client__links"
+              >
+                Consulta online
+              </NavLink>
+              <NavLink
+                activeclassname={"active"}
+                to="/user/client/{:id}/citas"
+                className="client__links"
+              >
+                Citas
+              </NavLink>
+              <NavLink
+                activeclassname={"active"}
+                to="/user/client/{:id}/informes"
+                className="client__links"
+              >
+                Informes y resultados
+              </NavLink>
+              <ButtonLogout/>
+            </nav>
+          </div>
+        </>
+      )}
+    </>
+  );
+};
+
+export default AreaCliente;
