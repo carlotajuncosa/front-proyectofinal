@@ -1,6 +1,14 @@
 @import "Schema.scss";
+
+.formLogin__box{
+    // height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formLogin {
-  margin: 0 auto;
+  margin: auto auto;
   width: 380px;
   height: 380px;
   text-align: center;

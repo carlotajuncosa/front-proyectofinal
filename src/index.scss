@@ -1,5 +1,10 @@
+@import './styles/Schema.scss';
+
+
 body {
   margin: 0;
+  background-color: $background-color;
+
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

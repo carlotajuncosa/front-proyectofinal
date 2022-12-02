@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Header from "./componentes/Header";
+import Footer from "./componentes/Footer";
 import Home from "./pages/Home";
 import Centro from "./pages/Centro";
 import Especialidades from "./pages/Especialidades";
@@ -26,7 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="" element={<Home />} className="allMovies" />
+        <Route path="" element={<Home />} />
         <Route path="/centro" element={<Centro />} />
         <Route path="/especialidades" element={<Especialidades />} />
         <Route path="/cuadro-medico" element={<CuadroMedico />} />
@@ -35,6 +36,7 @@ function App() {
         <Route path="/pedir-cita" element={<PedirCita />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

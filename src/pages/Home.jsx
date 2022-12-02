@@ -19,20 +19,38 @@ const Home = () => {
     </div>
       <h3>Especialidades</h3>
       <div className="home__specs">
-        <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia" className="home__specs--img"></img>
-        <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia" className="home__specs--img"></img>
-        <img src="../../assets/iconsSpecialities/gastro.svg" alt="gastro" className="home__specs--img"></img>
-        <img src="../../assets/iconsSpecialities/ginecologia.svg" alt="ginecologia" className="home__specs--img"></img>
-        <img src="../../assets/iconsSpecialities/psiquiatria.svg" alt="psiquiatria" className="home__specs--img"></img>
-        <img src="../../assets/iconsSpecialities/traumatologia.svg" alt="traumotologia" className="home__specs--img"></img>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia"></img>
+        <p className="home__specs--info">Cardiología</p>
+        </div>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia"></img>
+        <p className="home__specs--info">dermatologia</p>
+        </div>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/gastro.svg" alt="gastro"></img>
+        <p className="home__specs--info">gastroenterologia</p>
+        </div>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/ginecologia.svg" alt="ginecologia"></img>
+        <p className="home__specs--info">ginecologia</p>
+        </div>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/psiquiatria.svg" alt="psiquiatria"></img>
+        <p className="home__specs--info">psiquiatria</p>
+        </div>
+        <div className="home__specs--img">
+        <img src="../../assets/iconsSpecialities/traumatologia.svg" alt="traumatologia"></img>
+        <p className="home__specs--info">traumatologia</p>
+        </div>
       </div>
 
       <div className="home__remote">
-        <img src="https://via.placeholder.com/400" alt="videoconsulta" className="home__remote--img"></img>
-        <h2>¿No puedes acudir al centro? Tenemos video consulta</h2>
+        <img src="https://consumotic.mx/wp-content/uploads/2021/05/0512_doctora-laptop-768x463.jpg" alt="videoconsulta" className="home__remote--img"></img>
+        <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos video consulta</h2>
         <button className="home__remote--btn">Pide cita</button>
       </div>
-
+    <h3>Nuestras clínicas</h3>
       <Map />
     </div>
   );
