@@ -2,8 +2,8 @@
 
 .formContact {
   margin: 0 auto;
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 500px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -13,77 +13,98 @@
   overflow: hidden;
   border-radius: 25px;
 
+  @include tablet {
+    width: 600px;
+    height: 380px;
+  }
+
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 375px;
-    height: 375px;
+    width: 298px;
+    height: 498px;
     background-color: $background-color;
     z-index: 2;
     border-radius: 25px;
 
+    @include tablet {
+      width: 595px;
+      height: 375px;
+    }
 
     h2 {
       font-size: 1.5em;
-      padding-bottom: 0.2em;
+      padding: 0.5em 0.2em 0;
     }
     h3 {
-        font-size:0.8em;
-        padding-bottom: 2em;
-    }
-
-    p{
-        padding: 0.2em 0;
+      font-size: 0.8em;
+      padding: 0.5em;
     }
 
     label {
-      font-size: 1em;
+      font-size: 1.2em;
+      padding: 0.2em 0;
+      font-weight: 600;
+
+      @include tablet {
+        font-size: 1em;
+      }
     }
 
+    input {
+      width: 50%;
+    }
+    textarea {
+      width: 50%;
+    }
   }
-
-  span {
-    cursor: pointer;
-    text-decoration: underline blue;
-  }
-
 }
 
-.formContact::before{
-    content:"";
-    z-index: 1;
-    position:absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
+.formContact::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300px;
+  height: 500px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, $base-color, $base-color);
+  animation: formAnimate 8s linear infinite;
+
+  @include tablet {
+    width: 600px;
     height: 380px;
-    transform-origin: bottom right;
-    background: linear-gradient(0deg, transparent, $base-color, $base-color);
-    animation: formAnimate 8s linear infinite;
+  }
 }
 
-.formContact::after{
-    content:"";
-    z-index: 1;
-    position:absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
+.formContact::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300px;
+  height: 500px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, $base-color, $base-color);
+  animation: formAnimate 8s linear infinite;
+  animation-delay: -4s;
+
+  @include tablet {
+    width: 600px;
     height: 380px;
-    transform-origin: bottom right;
-    background: linear-gradient(0deg, transparent, $base-color, $base-color);
-    animation: formAnimate 8s linear infinite;
-    animation-delay: -4s;
+  }
 }
 
 @keyframes formAnimate {
-    0%{
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100%{
-        transform: rotate(360deg)
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }

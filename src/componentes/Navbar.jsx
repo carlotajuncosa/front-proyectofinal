@@ -3,14 +3,20 @@ import "../styles/Navbar.scss";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
+
 const Navbar = () => {
+
   const [ menu, setMenu ] = useState(false);
 
+  const handleMenu = () => {
+      setMenu(!menu)
+  }
   
   
   return (
-    <nav className={`navbar ${menu ? 'isActive' : ''}`}>
-        <NavLink
+    <nav /* className={`navbar ${menu ? 'isActive' : ''}`} */>
+
+      <NavLink
         activeclassname={"active"}
         to="/centro"
         className="navbar__links"

@@ -1,16 +1,14 @@
 @import "Schema.scss";
+
 .header {
-  padding: 1em;
   width: 100%;
+  padding: 0.7em 0;
   margin: 0 auto;
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: orange;
-  /*     background-color: $background-color;
- */
-  height: 100px;
+  
 
   &__logo {
     margin: 0;
@@ -19,7 +17,7 @@
   }
 
   &__button {
-    background-color: crimson;
+    background-color: $background-color; 
     border: black 2px solid;
     display: flex;
     align-items: center;
@@ -29,11 +27,8 @@
     /* display: none; */
   }
 
-  @media screen and (max-with: 480px) {
-    &__button {
-      background-color: aquamarine;
-      display: flex;
-    }
+  @include tablet {
+    display: flex;
   }
   
   &__svg {

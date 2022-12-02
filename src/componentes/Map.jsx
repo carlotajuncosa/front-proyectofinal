@@ -6,8 +6,8 @@ const Map = () => {
   return (
     <div id="map">
           <MapContainer
-        center={[37.35660035808131, -5.981777913238261]}
-        zoom={17}
+        center={[40.183055885239856, -3.6883233692751243]}
+        zoom={6}
         scrollWheelZoom={true}
       >
         <TileLayer

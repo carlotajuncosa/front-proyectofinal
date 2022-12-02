@@ -2,12 +2,14 @@ import React from "react";
 import FormLogin from "../componentes/FormLogin";
 import FormAppointment from "../componentes/FormAppointment";
 import { useSelector } from "react-redux";
+import "../styles/PedirCita.scss";
 const PedirCita = () => {
   const {user, token} = useSelector((state) => state.auth)
   return (
     <> 
       {!user && (
         <>
+        <div className="pedirCita">
           <h3>¿Aún no eres cliente?</h3>
           <h4>
             Los datos introducidos en este formulario serán tratados de forma
@@ -21,7 +23,8 @@ const PedirCita = () => {
             Rogamos, si es urgente, contacte directamente con Atención al
             Paciente en info@atenea.es
           </p>
-          <FormLogin type="login" />
+        </div>
+        <FormLogin type="login" />
         </>
       )}
       {user && <FormAppointment />}

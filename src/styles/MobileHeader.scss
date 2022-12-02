@@ -1,0 +1,39 @@
+@import "Schema.scss";
+
+.mobileHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 80px;
+    padding: 1em 0;
+    background-color: $background-color;
+    &__logo{
+        padding: 0 1em;
+        width: 200px;
+    }
+    
+    &__button {
+      position: absolute;
+      top: 0.7em;
+      right: 2em;
+      width: 3em;
+      height: 3em;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $background-color;
+  
+    }
+    &__svg {
+      height: 2.5em;
+      width: 2.5em;
+      
+    }
+   
+
+    @include tablet {
+        display: none;
+      }
+}

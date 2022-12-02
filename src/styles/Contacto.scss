@@ -1,0 +1,19 @@
+@import "Schema.scss";
+
+.contact {
+    text-align: center;
+
+    &__ul{
+        height: 10vh;
+        text-align: center;
+
+        &--li{
+            margin: 10px;
+            background-color: $base-color;
+            padding: 10px;
+            font-size: 26px;
+            color: white;
+            font-weight: 700;
+        }
+    }
+}

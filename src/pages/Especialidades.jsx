@@ -92,7 +92,10 @@ const Especialidades = () => {
           </div>
           <div className="especialidades__box--text">
             <h3>Psiquiatría</h3>
-            <p>Esto es el texto de psiquiatria</p>
+            <p>La psiquiatría es la rama de la medicina dedicada al estudio de 
+              los trastornos mentales con el objetivo de prevenir, evaluar, diagnosticar, 
+              tratar y rehabilitar a las personas con trastornos mentales y asegurar la autonomía 
+              y la adaptación del individuo a las condiciones de su existencia</p>
           </div>
         </div>
 

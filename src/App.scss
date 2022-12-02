@@ -3,8 +3,10 @@
 @import "./styles/Schema.scss";
 
 .App{
-    background-color: $background-color;
+    width: 90%;
+    max-width: 1440px;
     height: 100%;
+    margin: 0 auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

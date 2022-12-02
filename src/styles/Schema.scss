@@ -2,7 +2,7 @@
 $base-color: #8cc9a9;
 $secondary-color: #e2e1e1;
 $background-color: #f4f3ef;
-$border: 1px solid black;
+$border: 1px solid #8d8c8c;
 $grey: #333;
 $unactive: #9b9b9b;
 
@@ -24,4 +24,28 @@ $unactive: #9b9b9b;
         background-color: $base-color;
         border: 1px solid $secondary-color;
       }
+}
+
+// <--- mixins --->
+
+$layout_bp_mobile: 320px;
+$layout_bp_tablet: 600px;
+$layout_bp_desktop: 1400px;
+
+@mixin mobile {
+    @media only screen and (min-width: #{$layout_bp_mobile}) {
+      @content;
+    }
+  }
+
+@mixin tablet {
+  @media only screen and (min-width: #{$layout_bp_tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$layout_bp_desktop}) {
+    @content;
+  }
 }

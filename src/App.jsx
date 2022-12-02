@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Header from "./componentes/Header";
+import MobileHeader from "./componentes/MobileHeader";
 import Footer from "./componentes/Footer";
 import Home from "./pages/Home";
 import Centro from "./pages/Centro";
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <MobileHeader />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/centro" element={<Centro />} />

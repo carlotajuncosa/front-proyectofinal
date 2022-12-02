@@ -1,0 +1,16 @@
+.diag{
+    width: 90%;
+    margin: 0 auto;
+
+    &__title{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__content{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
