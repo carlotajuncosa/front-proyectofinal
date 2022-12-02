@@ -1,0 +1,65 @@
+@import "Schema.scss";
+.home{
+    width: 80%;
+    margin: 0 auto;
+
+    &__ul{
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        
+        &--li{
+            margin: 10px;
+            background-color: $base-color;
+            padding: 10px;
+            font-size: 26px;
+            color: white;
+           
+
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__video{
+        position: relative;
+
+        &--button{
+            position: absolute;
+            left: 40%;
+            top: 80%;
+            background-color: $base-color;
+            padding: 10px;
+            width: 20%;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            transition: ease 1s;
+            border: none;
+
+            &:hover{
+                background-color: white;
+                color: $base-color;
+            }
+        }
+
+        &--src {
+        margin-top: 20px;
+        width: 100%;
+        }
+    }
+
+    &__specs{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &--img{
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+  
+}

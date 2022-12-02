@@ -91,8 +91,8 @@ const FormLogin = ({ type }) => {
   {form === "regist" && (
     <>
       <div className="formLogin__form">
-        <h2>Registrarse</h2>
         <form onSubmit={handleSubmit(registerUser)}>
+        <h2>Registrarse</h2>
           <label htmlFor="email">
             <p>Dirección de correo electrónico</p>
           </label>
@@ -143,7 +143,9 @@ const FormLogin = ({ type }) => {
           {errors.password_repeat && <p>{errors.password_repeat.message}</p>}
         </div>
 
-        <input type="submit" value="Registrarse" />
+        <button type="submit" disabled={!isValid}>
+        Registrarse
+        </button>
       </form>
       <p>
         ¿Ya tienes cuenta de usuario? <span onClick={() => setform("login")}>Click aqui para entrar</span>

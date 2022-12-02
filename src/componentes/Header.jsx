@@ -7,8 +7,8 @@ const Header = () => {
     <div className="header">
       <img
       className="header__logo"
-        src="https://i.pinimg.com/736x/25/c2/fb/25c2fb35ebfd413edd0a61d12e33b9b6.jpg"
-        alt="logo-athena"
+        src="../../assets/logo/logo_header.svg"
+        alt="logo"
       />
       <Navbar />
       

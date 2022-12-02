@@ -1,1 +1,7 @@
 @import "./Reset.scss";
+@import "./styles/Global.scss";
+@import "./styles/Schema.scss";
+
+.App{
+    background-color: $background-color;
+}

@@ -1,0 +1,22 @@
+.especialidades{
+
+    &__title{
+        padding: 50px;
+        text-align: center;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__box{
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+
+        &__text{
+            padding: 30px;
+            width: 400px;
+        }
+    }
+}

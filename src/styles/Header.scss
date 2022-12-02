@@ -1,11 +1,16 @@
+@import "Schema.scss";
 .header{
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $background-color;
+    height: 100px;
 
     &__logo{
-        height: 10vh;
+        margin: 0;
+        padding: 0.2em 1em;
+        height: 3em;
     }
 }

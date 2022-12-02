@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_3" data-name="Capa 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293.32 170.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #8cc9a9;
+      }
+
+      .cls-4 {
+        font-size: 40.34px;
+      }
+
+      .cls-3 {
+        font-family: Hind-Bold, Hind;
+      }
+
+      .cls-5 {
+        font-size: 44.51px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(97.07 70.62)"><tspan class="cls-4"><tspan x="0" y="0">Health </tspan></tspan><tspan class="cls-4" x="0" y="42.36">Algorithm</tspan><tspan class="cls-5" x="185.12" y="42.36"> </tspan></text>
+  <circle class="cls-2" cx="45.96" cy="80.12" r="39.14"/>
+  <rect class="cls-1" x="26.76" y="60.92" width="38.4" height="38.4" transform="translate(-43.19 55.96) rotate(-45)"/>
+</svg>

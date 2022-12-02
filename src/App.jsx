@@ -18,7 +18,7 @@ function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
-  useEffect(() => {
+  useEffect(() => { 
     token && dispatch(checkSession(token, navigate))
   }, []);
 

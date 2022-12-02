@@ -1,0 +1,44 @@
+@import "Schema.scss";
+.formLogin {
+  margin: 0 auto;
+  width: 30vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $base-color;
+  position: relative;
+
+  form {
+    padding: 2em;
+
+    h2 {
+      font-size: 2em;
+      padding: 1em;
+    }
+
+    p{
+        padding: 0.2em 0;
+    }
+
+    label {
+      font-size: 1.2em;
+    }
+
+  }
+
+  span {
+    cursor: pointer;
+    text-decoration: underline blue;
+  }
+}
+
+.formLogin::before{
+    content:"";
+    z-index:-1;
+    position:absolute;
+    top: -50%;
+    left: -50%;
+
+}
