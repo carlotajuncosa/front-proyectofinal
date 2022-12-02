@@ -121,7 +121,7 @@ const FormContact = () => {
         </>
       ) : null}
       
-      <button className="formContact__button" type="submit" disabled={!isValid}>
+      <button className="primary_button" type="submit" disabled={!isValid}>
         Enviar
       </button>
     </form>

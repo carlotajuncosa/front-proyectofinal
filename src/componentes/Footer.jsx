@@ -5,7 +5,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__logo">
-
+      <img
+        src="../../assets/logo/logo_responsive2.svg"
+        alt="logo"
+      />
       </div>
       <ul className="footer__ul">
       <h3>Centro</h3>

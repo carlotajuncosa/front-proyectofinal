@@ -1,7 +1,26 @@
 .navbar {
     width: 80%;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: flex-end;
+    align-items: center;
 
     &__links{
-        padding: 0 1em;
+        margin: 0 .5em;
+    }
+}
+
+@media screen and (max-width:480px){
+    .navbar .isActive{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; 
+        &__links{
+           margin: .5em 0; 
+        }
+
+
     }
 }

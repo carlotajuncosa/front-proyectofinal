@@ -1,5 +1,14 @@
 .footer {
-  padding: 2em 0;
+    margin: 0 auto;
+  padding: 2em 0 1em;
   width: 80%;
   display: flex;
+  justify-content: center;
+  gap: 2em;
+
+  &__logo{
+    img{
+      width: 150px;
+    }
+  }
 }

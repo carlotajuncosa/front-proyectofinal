@@ -1,9 +1,9 @@
 import React from "react";
 import FormLogin from "../componentes/FormLogin";
 import FormAppointment from "../componentes/FormAppointment";
-
+import { useSelector } from "react-redux";
 const PedirCita = () => {
-  const user = localStorage.user;
+  const {user, token} = useSelector((state) => state.auth)
   return (
     <> 
       {!user && (

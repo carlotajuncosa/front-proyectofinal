@@ -6,7 +6,7 @@ import ButtonLogout from "../componentes/ButtonLogout";
 import { useSelector } from "react-redux";
 
 const AreaCliente = () => {
-  const {user, token} = useSelector((state) => state.auth)
+  const { user, token } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -36,7 +36,7 @@ const AreaCliente = () => {
               >
                 Informes y resultados
               </NavLink>
-              <ButtonLogout/>
+              <ButtonLogout />
             </nav>
           </div>
         </>

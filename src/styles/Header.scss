@@ -1,16 +1,43 @@
 @import "Schema.scss";
-.header{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $background-color;
-    height: 100px;
+.header {
+  padding: 1em;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  /*     background-color: $background-color;
+ */
+  height: 100px;
 
-    &__logo{
-        margin: 0;
-        padding: 0.2em 1em;
-        height: 3em;
+  &__logo {
+    margin: 0;
+    padding: 0.2em 1em;
+    height: 3em;
+  }
+
+  &__button {
+    background-color: crimson;
+    border: black 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    /* display: none; */
+  }
+
+  @media screen and (max-with: 480px) {
+    &__button {
+      background-color: aquamarine;
+      display: flex;
+    }
+  }
+  
+  &__svg {
+      width: 2em;
+      height: 2em;
     }
 }

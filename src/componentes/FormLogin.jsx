@@ -85,7 +85,7 @@ const FormLogin = ({ type }) => {
                 />
                 {errors.password ? <p>Contraseña incorrecta</p> : null}
               </div>
-              <button type="submit" disabled={!isValid}>
+              <button className="primary_button" type="submit" disabled={!isValid}>
                 Login
               </button>
               <p className="pLink">
@@ -166,7 +166,7 @@ const FormLogin = ({ type }) => {
                 )}
               </div>
 
-              <button type="submit" disabled={!isValid}>
+              <button className="primary_button" type="submit" disabled={!isValid}>
                 Registrarse
               </button>
               <p className="pLink">

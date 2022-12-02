@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.scss";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [ menu, setMenu ] = useState(false);
+
+  
+  
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${menu ? 'isActive' : ''}`}>
         <NavLink
         activeclassname={"active"}
         to="/centro"

@@ -4,4 +4,24 @@ $secondary-color: #e2e1e1;
 $background-color: #f4f3ef;
 $border: 1px solid black;
 $grey: #333;
+$unactive: #9b9b9b;
 
+.primary_button{
+    border: none;
+    border-radius: 25px;
+    padding: 0.52em 2em;
+    margin: 1em 0;
+    cursor: pointer;
+    color: $unactive;
+    font-weight: 600;
+    background-color: $background-color;
+    border: 1px solid $base-color;
+    transition: ease-in 500ms;
+    
+
+    &:valid {
+        color: white;
+        background-color: $base-color;
+        border: 1px solid $secondary-color;
+      }
+}

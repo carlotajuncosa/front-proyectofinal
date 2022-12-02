@@ -1,0 +1,89 @@
+@import "Schema.scss";
+
+.formContact {
+  margin: 0 auto;
+  width: 380px;
+  height: 380px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 375px;
+    background-color: $background-color;
+    z-index: 2;
+    border-radius: 25px;
+
+
+    h2 {
+      font-size: 1.5em;
+      padding-bottom: 0.2em;
+    }
+    h3 {
+        font-size:0.8em;
+        padding-bottom: 2em;
+    }
+
+    p{
+        padding: 0.2em 0;
+    }
+
+    label {
+      font-size: 1em;
+    }
+
+  }
+
+  span {
+    cursor: pointer;
+    text-decoration: underline blue;
+  }
+
+}
+
+.formContact::before{
+    content:"";
+    z-index: 1;
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 380px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, $base-color, $base-color);
+    animation: formAnimate 8s linear infinite;
+}
+
+.formContact::after{
+    content:"";
+    z-index: 1;
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 380px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, $base-color, $base-color);
+    animation: formAnimate 8s linear infinite;
+    animation-delay: -4s;
+}
+
+@keyframes formAnimate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg)
+    }
+}
