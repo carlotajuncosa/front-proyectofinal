@@ -39,10 +39,8 @@ const FormLogin = ({ type }) => {
       <>
       <form className="formLogin__form" onSubmit={handleSubmit(login)}>
         <h2>Acceder</h2>
-        <label htmlFor="email">
-        <p>Dirección de correo electrónico</p>
-        </label>
         <div className="inputForm">
+        <label htmlFor="email"><p>E-mail</p></label>
         <input
           type="email"
           name="email"
@@ -66,8 +64,8 @@ const FormLogin = ({ type }) => {
           </>
         ) : null}
         </div>
-        <label htmlFor="password">Contraseña</label>
         <div className="inputForm">
+        <label htmlFor="password"><p>Contraseña</p></label>
         <input
           type="password"
           name="password"
@@ -81,8 +79,8 @@ const FormLogin = ({ type }) => {
         <button type="submit" disabled={!isValid}>
           Login
         </button>
+      <p className="pLink">¿Aún no eres paciente? <span onClick={() => setform("regist")}>Crea tu cuenta</span></p>
       </form>
-      <p>¿Aún no eres paciente? <span onClick={() => setform("regist")}>Crea tu cuenta</span></p>
       </>
       )}
     
@@ -90,11 +88,10 @@ const FormLogin = ({ type }) => {
   
   {form === "regist" && (
     <>
-      <div className="formLogin__form">
-        <form onSubmit={handleSubmit(registerUser)}>
+        <form className="formLogin__form" onSubmit={handleSubmit(registerUser)}>
         <h2>Registrarse</h2>
           <label htmlFor="email">
-            <p>Dirección de correo electrónico</p>
+            <p>E-mail</p>
           </label>
           <div className="inputForm">
             <input
@@ -107,6 +104,7 @@ const FormLogin = ({ type }) => {
           />
           {errors.email?.type === "required" && <p>El campo Email es requerido</p>}
           {errors.email?.type === "pattern" && <p>El formato del Email es incorrecto</p>}
+
         </div>
         <label htmlFor="password">
           <p>Contraseña</p>
@@ -146,11 +144,10 @@ const FormLogin = ({ type }) => {
         <button type="submit" disabled={!isValid}>
         Registrarse
         </button>
-      </form>
-      <p>
+      <p className="pLink">
         ¿Ya tienes cuenta de usuario? <span onClick={() => setform("login")}>Click aqui para entrar</span>
       </p>
-    </div>
+      </form>
   </> 
 )}
 </div> )}

@@ -1,21 +1,32 @@
 @import "Schema.scss";
 .formLogin {
   margin: 0 auto;
-  width: 30vw;
+  width: 380px;
+  height: 380px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: $base-color;
   position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 
   form {
-    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    height: 375px;
+    background-color: $background-color;
+    z-index: 2;
+    border-radius: 25px;
+
 
     h2 {
       font-size: 2em;
-      padding: 1em;
+      padding-bottom: 1em;
     }
 
     p{
@@ -23,7 +34,7 @@
     }
 
     label {
-      font-size: 1.2em;
+      font-size: 0.8em;
     }
 
   }
@@ -32,13 +43,42 @@
     cursor: pointer;
     text-decoration: underline blue;
   }
+
 }
 
 .formLogin::before{
     content:"";
-    z-index:-1;
+    z-index: 1;
     position:absolute;
     top: -50%;
     left: -50%;
+    width: 380px;
+    height: 380px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, $base-color, $base-color);
+    animation: formAnimate 8s linear infinite;
+}
 
+.formLogin::after{
+    content:"";
+    z-index: 1;
+    position:absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 380px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, $base-color, $base-color);
+    animation: formAnimate 8s linear infinite;
+    animation-delay: -4s;
+}
+
+@keyframes formAnimate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg)
+    }
 }

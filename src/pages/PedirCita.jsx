@@ -8,11 +8,11 @@ const PedirCita = () => {
     <> 
       {!user && (
         <>
-          <h2>¿Aún no eres cliente?</h2>
-          <h3>
+          <h3>¿Aún no eres cliente?</h3>
+          <h4>
             Los datos introducidos en este formulario serán tratados de forma
             confidencial.
-          </h3>
+          </h4>
           <p>
             Descubre todas las ventajas que tendrias como paciente de nuestra
             clinica

@@ -17,6 +17,7 @@ const Home = () => {
       </video>
       <button className="home__video--button">Pide cita</button>
     </div>
+      <h3>Especialidades</h3>
       <div className="home__specs">
         <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia" className="home__specs--img"></img>
         <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia" className="home__specs--img"></img>
