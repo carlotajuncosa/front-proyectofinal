@@ -100,12 +100,14 @@ const Footer = () => {
             <span>902 02 02 02</span>
           </li>
           <li className="footer__li">
+          <div className="footer__mail">
             <img className="footer__li__svg" src="../../assets/contact/mail.svg" alt="email" />
             {
               <Mailto email="info@healthalgorithm.es" subject="Contacto desde web" body="">
                 Email
               </Mailto>
             }
+            </div>
           </li>
         </li>
       </ul>
