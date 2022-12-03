@@ -4,6 +4,26 @@
   width: 90%;
   font-size: $generalFont;
 
+  &--button {
+    position: absolute;
+    left: 37.5%;
+    top: 75%;
+    padding: 5px;
+    width: 25%;
+    background-color: $base-color;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    transition: ease 1s;
+    border: none;
+
+    @include tablet {
+      left: 37.5%;
+      top: 85%;
+    }
+  }
+
   &__ul {
     width: 100%;
     text-align: center;
@@ -30,78 +50,11 @@
     min-height: max-content;
     max-height: 73vh;
 
-    &--button {
-      position: absolute;
-      left: 25%;
-      top: 75%;
-      padding: 5px;
-      width: 50%;
-      background-color: $base-color;
-      cursor: pointer;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: white;
-      transition: ease 1s;
-      border: none;
-
-      @include tablet {
-        left: 25%;
-        top: 85%;
-      }
-
-      @include desktop {
-        left: 27%;
-        top: 90%;
-      }
-
-      &:hover {
-        background-color: white;
-        color: $base-color;
-      }
-    }
-
     &--src {
       top: 0;
       left: 0;
       width: 100%;
       height: auto;
-    }
-  }
-
-  &__video {
-    position: relative;
-    overflow: hidden;
-    min-height: max-content;
-    max-height: 73vh;
-
-    &--button {
-      position: absolute;
-      left: 25%;
-      top: 75%;
-      padding: 5px;
-      width: 50%;
-      background-color: $base-color;
-      cursor: pointer;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: white;
-      transition: ease 1s;
-      border: none;
-
-      @include tablet {
-        left: 25%;
-        top: 85%;
-      }
-
-      @include desktop {
-        left: 27%;
-        top: 90%;
-      }
-
-      &:hover {
-        background-color: white;
-        color: $base-color;
-      }
     }
   }
 
@@ -191,36 +144,6 @@
         left: 0;
         right: 0;
         text-transform: capitalize;
-      }
-    }
-
-    &--btn {
-      position: absolute;
-      top: 85%;
-      left: 25%;
-      width: 50%;
-      background-color: $base-color;
-      padding: 5px;
-      cursor: pointer;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: white;
-      transition: ease 1s;
-      border: none;
-
-      @include tablet {
-        left: 25%;
-        top: 85%;
-      }
-
-      @include desktop {
-        left: 27%;
-        top: 90%;
-      }
-
-      &:hover {
-        background-color: white;
-        color: $base-color;
       }
     }
   }
