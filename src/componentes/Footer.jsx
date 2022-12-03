@@ -8,11 +8,7 @@ const Footer = () => {
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
 
-    return (
-      <li className="footer__li" href={`mailto:${email}${params}`}>
-        {children}
-      </li>
-    );
+    return <a href={`mailto:${email}${params}`}>{children}</a>;
   };
 
   return (
@@ -97,16 +93,18 @@ const Footer = () => {
           <p>09:00 a 15:00</p>
           <li className="footer__li">
             <img className="footer__li__svg" src="../../assets/contact/phone.svg" alt="phone" />
-            <span><a href="tel:902-02-02-02">902 02 02 02</a></span>
+            <span>
+              <a href="tel:902-02-02-02">902 02 02 02</a>
+            </span>
           </li>
           <li className="footer__li">
-          <div className="footer__mail">
-            <img className="footer__li__svg" src="../../assets/contact/mail.svg" alt="email" />
-            {
-              <Mailto email="info@healthalgorithm.es" subject="Contacto desde web" body="">
-                Email
-              </Mailto>
-            }
+            <div className="footer__mail">
+              <img className="footer__li__svg" src="../../assets/contact/mail.svg" alt="email" />
+              {
+                <Mailto email="info@healthalgorithm.es" subject="Contacto desde footer de la web" body="Estoy interesado en recibir informacion relacionada con ...">
+                  Email
+                </Mailto>
+              }
             </div>
           </li>
         </li>
