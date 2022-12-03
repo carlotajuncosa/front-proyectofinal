@@ -1,0 +1,12 @@
+.doctors{
+    display: flex;
+    padding: 20px;
+
+    img{
+        width: 300px;
+    }
+
+    &__info {
+        padding: 10px;
+    }
+}
