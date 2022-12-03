@@ -16,7 +16,7 @@ const DoctorsCard = ({doctor}) => {
 
       <div className="doctors__info">
         <h4>{doctor.name} {doctor.surname}</h4>
-        <p>Especialidad: {doctor.specialty}</p>
+        <p>Especialidad: <span>{doctor.specialty}</span></p>
       </div>
 
     </div>

@@ -10,18 +10,19 @@ const CuadroMedico = () => {
 
   const dispatch = useDispatch();
   const { doctors, isLoading } = useSelector((state) => state.doctors);
-  const [searchInputValue, setSearchInputValue] = useState("");
+  const [searchInputDoctors, setSearchInputDoctors] = useState("");
 
   useEffect(() => {
     dispatch(getDoctors());
   }, []);
 
   const filteredDoctors = [];
+
   
   doctors.map((doctor) => {
-    if (doctor.name.toLowerCase().includes(searchInputValue.toLowerCase()) ||
-      doctor.surname.toLowerCase().includes(searchInputValue.toLowerCase())||
-      doctor.specialty.toLowerCase().includes(searchInputValue.toLowerCase())
+    if (doctor.name.toLowerCase().includes(searchInputDoctors.toLowerCase()) ||
+      doctor.surname.toLowerCase().includes(searchInputDoctors.toLowerCase()) ||
+      doctor.specialty.toLowerCase().includes(searchInputDoctors.toLowerCase())
       ) {
       filteredDoctors.push(doctor);
     }
@@ -39,9 +40,9 @@ const CuadroMedico = () => {
               <input 
               type="search" 
               className="input-search" 
-              placeholder="Buscar Doctor" 
-              value={searchInputValue}
-              onChange={(e) => setSearchInputValue(e.target.value)}
+              placeholder="BUSCAR DOCTOR O ESPECIALIDAD" 
+              value={searchInputDoctors}
+              onChange={(e) => setSearchInputDoctors(e.target.value)}
               />
             </div>
             <div className='doctor__cards'>
@@ -52,8 +53,6 @@ const CuadroMedico = () => {
           </div>
         )}
       </>
-      <div className='medicalChart__search'>
-      </div>
         <FormContact />
         <Map />
     </div>
