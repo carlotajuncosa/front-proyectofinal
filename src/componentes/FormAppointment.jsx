@@ -23,7 +23,7 @@ const FormAppointment = () => {
     <div className="formAppointment__box">
       <div className="formAppointment">
       <form
-        className="formAppointment"
+        className="formAppointment__form"
         onSubmit={handleSubmit(newAppointments)}
       >
         <h2>Pedir Cita</h2>

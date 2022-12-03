@@ -1,32 +1,33 @@
 @import "Schema.scss";
 
 .formAppointment__box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1em;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+  }
 
 .formAppointment {
   font-size: $generalFont;
-    margin: 0 auto;
-    font-size: 16px;
-    width: 50vw;
-    min-width: 300px;
-    height: 380px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    border-radius: 25px;
+  margin: 0 auto;
+  font-size: 16px;
+  width: 50vw;
+  min-width: 300px;
+  height: 380px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
 
   @include tablet {
     width: 380px;
   }
 
-  form {
+  &__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +45,7 @@
 
     h2 {
       font-size: 2em;
-      padding-bottom: 1em;
+      padding-top: 0.5em;
     }
 
     p {
@@ -70,5 +71,52 @@
         min-width: unset;
       }
     }
+  }
+}
+
+.formAppointment::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50vw;
+  min-width: 300px;
+  height: 380px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, $base-color, $base-color);
+  animation: formAnimate 8s linear infinite;
+
+  @include tablet {
+    width: 380px;
+  }
+}
+
+.formAppointment::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50vw;
+  min-width: 300px;
+  height: 380px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, $base-color, $base-color);
+  animation: formAnimate 8s linear infinite;
+  animation-delay: -4s;
+
+  @include tablet {
+    width: 380px;
+  }
+}
+
+@keyframes formAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
