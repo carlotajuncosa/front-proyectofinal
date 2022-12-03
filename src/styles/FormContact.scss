@@ -2,7 +2,8 @@
 
 .formContact {
   margin: 0 auto;
-  width: 300px;
+  width: 50vw;
+  min-width: 300px;
   height: 500px;
   text-align: center;
   display: flex;
@@ -23,7 +24,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 298px;
+    width: calc(50vw - 2px);
+    min-width: 298px;
     height: 498px;
     background-color: $background-color;
     z-index: 2;
@@ -55,9 +57,19 @@
 
     input {
       width: 50%;
+      min-width: 35vw;
+
+      @include tablet {
+        min-width: unset;
+      }
     }
     textarea {
       width: 50%;
+      min-width: 35vw;
+
+      @include tablet {
+        min-width: unset;
+      }
     }
   }
 }
@@ -68,7 +80,8 @@
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 300px;
+  width: 50vw;
+  min-width: 300px;
   height: 500px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
@@ -86,7 +99,8 @@
   position: absolute;
   top: -50%;
   left: -50%;
-  width: 300px;
+  width: 50vw;
+  min-width: 300px;
   height: 500px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
