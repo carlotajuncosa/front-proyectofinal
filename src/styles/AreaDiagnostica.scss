@@ -1,16 +1,55 @@
-.diag{
-    width: 90%;
-    margin: 0 auto;
-
-    &__title{
-        text-align: center;
-        padding-bottom: 20px;
+.diag {
+    &__title {
+      padding: 50px;
+      text-align: center;
     }
-
-    &__content{
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+  
+    &__container {
+      display: flex;
+      flex-direction: column;
     }
-}
+  
+    &__box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+    @media screen and (max-width: 821px) {
+      &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  
+    &__box--text {
+      width: 400px;
+      height: 400px;
+      background-color: white;
+      padding-right: 20px;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-content: center;
+      box-sizing: border-box;
+  
+      h3 {
+        padding-bottom: 10px;
+      }
+      p {
+      }
+    }
+  
+    &__box--img {
+      width: 400px;
+      height: 400px;
+    }
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+  }

@@ -6,6 +6,11 @@ $border: 1px solid #8d8c8c;
 $grey: #333;
 $unactive: #9b9b9b;
 
+.title{
+  text-align: center;
+  padding: 20px;
+}
+
 .primary_button{
     border: none;
     border-radius: 25px;
@@ -28,9 +33,9 @@ $unactive: #9b9b9b;
 
 // <--- mixins --->
 
-$layout_bp_mobile: 320px;
-$layout_bp_tablet: 600px;
-$layout_bp_desktop: 1400px;
+$layout_bp_mobile: 480px;
+$layout_bp_tablet: 1250px;
+$layout_bp_desktop: 1500px;
 
 @mixin mobile {
     @media only screen and (min-width: #{$layout_bp_mobile}) {

@@ -31,7 +31,7 @@ const CuadroMedico = () => {
 
   return (
     <div className='medicalChart'>
-      <h1 className='medicalChart__title'>Cuadro Medico</h1>
+      <h2 className='title'>Cuadro Medico</h2>
       <>
         {!isLoading && (
           <div className='doctor'>
@@ -52,7 +52,6 @@ const CuadroMedico = () => {
           </div>
         )}
       </>
-      
       <div className='medicalChart__search'>
       </div>
         <FormContact />
