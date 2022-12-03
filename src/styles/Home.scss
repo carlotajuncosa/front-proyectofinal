@@ -6,9 +6,12 @@
     &__ul{
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0.5em 0;
         
         &--li{
-            margin: 10px;
             background-color: $base-color;
             padding: 10px;
             font-size: 26px;
@@ -22,6 +25,9 @@
 
     &__video{
         position: relative;
+        overflow: hidden;
+        min-height: max-content;
+        max-height: 73vh;
 
         // @include tablet{
         //     left: 25%;
@@ -65,7 +71,10 @@
         }
 
         &--src {
-        width: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
         }
     }
 
