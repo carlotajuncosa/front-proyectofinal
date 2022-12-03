@@ -4,7 +4,7 @@ import FormContact from "../componentes/FormContact";
 const Especialidades = () => {
   return (
     <div className="especialidades">
-      <h1 className="especialidades__title">Especialidades</h1>
+      <h2 className="title">Especialidades</h2>
       <div className="especialidades__container">
         <div className="especialidades__box">
           <div className="especialidades__box--text">

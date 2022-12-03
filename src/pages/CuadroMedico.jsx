@@ -6,7 +6,7 @@ import "../styles/CuadroMedico.scss";
 const CuadroMedico = () => {
   return (
     <div className='medicalChart'>
-      <h1 className='medicalChart__title'>Cuadro Medico</h1>
+      <h2 className='title'>Cuadro Medico</h2>
       <div className='medicalChart__search'>
       <input type="search" name="medicalsearch" placeholder="Buscar Doctor" />
       </div>

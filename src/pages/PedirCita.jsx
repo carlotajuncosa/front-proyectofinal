@@ -10,7 +10,7 @@ const PedirCita = () => {
       {!user && (
         <>
         <div className="pedirCita">
-          <h3>¿Aún no eres cliente?</h3>
+          <h2 className="title">¿Aún no eres cliente?</h2>
           <h4>
             Los datos introducidos en este formulario serán tratados de forma
             confidencial.
