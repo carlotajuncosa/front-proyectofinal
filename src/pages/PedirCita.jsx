@@ -27,7 +27,12 @@ const PedirCita = () => {
         <FormLogin type="login" />
         </>
       )}
-      {user && <FormAppointment />}
+      {user && (
+        <>
+        <h2 className="title">Solicita tu cita online</h2>
+        <FormAppointment />
+        </>
+      )}
     </>
   );
 };
