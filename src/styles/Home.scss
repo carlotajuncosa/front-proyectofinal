@@ -23,20 +23,42 @@
 
     &__video{
         position: relative;
+        margin-top: 10px;
+
+        // @include tablet{
+        //     left: 25%;
+        //     top: 85%;
+        // }
+
+        // @include desktop{
+        //     left: 27%;
+        //     top: 90%;
+        // }
+
 
         &--button{
             position: absolute;
-            left: 40%;
-            top: 80%;
+            left: 25%;
+            top: 75%;
+            padding: 5px;
+            width: 50%;
             background-color: $base-color;
-            padding: 10px;
-            width: 20%;
             cursor: pointer;
             font-weight: 700;
             text-transform: uppercase;
             color: white;
             transition: ease 1s;
             border: none;
+
+            @include tablet{
+                left: 25%;
+                top: 85%;
+            }
+
+            @include desktop{
+                left: 27%;
+                top: 90%;
+            }
 
             &:hover{
                 background-color: white;
@@ -96,26 +118,48 @@
 
         &--h2{
             position: absolute;
-            top: 75%;
-            font-size: 32px;
+            top: 55%;
             left: 10%;
+            font-size: 2.3vw;
             color: $grey;
-            text-transform: uppercase;            
+            text-transform: uppercase;       
+            
+            @include tablet{
+                font-size: 2.4vw;
+                top: 70%;
+                left: 10%;
+            }
+
+            @include desktop{
+                top: 75%;
+                left: 10%;
+                text-transform: capitalize;
+            }
         }
 
         &--btn{
             position: absolute;
-            left: 40%;
-            top:82%;
+            left: 25%;
+            top: 75%;
+            width: 50%;
             background-color: $base-color;
-            padding: 10px;
-            width: 20%;
+            padding: 5px;
             cursor: pointer;
             font-weight: 700;
             text-transform: uppercase;
             color: white;
             transition: ease 1s;
             border: none;
+
+            @include tablet{
+                left: 25%;
+                top: 85%;
+            }
+
+            @include desktop{
+                left: 27%;
+                top: 90%;
+            }
 
             &:hover{
                 background-color: white;
