@@ -2,8 +2,9 @@
 
 .diag {
   &__title {
-    padding: 50px;
     text-align: center;
+    padding: 20px 10px;
+    font-size: 2.5em;
   }
 
   &__container {
@@ -18,22 +19,15 @@
     gap: 10px;
     padding-bottom: 10px;
   }
-  
-  @include tablet {
-    &__box {
-      display: flex;
-      justify-content: center;
-    }
-    &__box--text {
-      width: 400px;
-      height: 400px;
-    }
-    &__box--img {
-      width: 400px;
-      height: 400px;
-    }
+  &__box--img {
+    width: 300px;
+    height: 300px;
   }
-
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
   &__box--text {
     width: 300px;
     height: 300px;
@@ -45,22 +39,58 @@
     text-align: left;
     justify-content: center;
     box-sizing: border-box;
-
+    
     h3 {
       padding-bottom: 10px;
     }
-    p {
+
+  }
+  
+  @include mobile_s {
+    .title{
+      text-align: center;
+      padding: 20px;
+      font-size: 3em;
+    }
+  } 
+  @include mobileLandscape {
+    &__box {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+    &__box--text {
+      width: 350px;
+      height: 350px;
+    }
+    &__box--img {
+      width: 350px;
+      height: 350px;
+    }
+    &__img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
-
-  &__box--img {
-    width: 300px;
-    height: 300px;
-  }
-
-  &__img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  @include tablet {
+    &__box {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+    &__box--text {
+      width: 450px;
+      height: 450px;
+    }
+    &__box--img {
+      width: 450px;
+      height: 450px;
+    }
+    &__img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    } 
   }
 }
