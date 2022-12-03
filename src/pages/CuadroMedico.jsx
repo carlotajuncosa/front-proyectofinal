@@ -32,7 +32,7 @@ const CuadroMedico = () => {
 
   return (
     <div className='medicalChart'>
-      <h2 className='title'>Cuadro Medico</h2>
+      <h2 className='title'>Cuadro Médico</h2>
       <>
         {!isLoading && (
           <div className='doctor'>
