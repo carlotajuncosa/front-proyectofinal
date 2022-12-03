@@ -130,7 +130,7 @@
     &--wrapper {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      gap: 10px 50px;
+      gap: 10px calc(100vw / 3 / 2);
 
       @include mobile {
         grid-template-columns: repeat(2, 1fr);
@@ -155,11 +155,15 @@
       cursor: pointer;
 
       img {
-        width: 30vw;
+        width: 35vw;
         height: 100%;
 
         @include mobile {
-          width: 12vw;
+          width: 25vw;
+        }
+
+        @include tablet {
+            width: 12vw;
         }
       }
     }
