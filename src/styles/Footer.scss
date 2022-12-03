@@ -7,6 +7,7 @@
   justify-content: space-evenly;
   gap: 2em;
   border-top: $border;
+  flex-wrap: wrap;
 
   &__logo {
     img {
@@ -49,6 +50,9 @@
       &:hover {
         text-decoration: none;
       }
+    }
+    &__svg {
+      height: 1em;
     }
   }
 

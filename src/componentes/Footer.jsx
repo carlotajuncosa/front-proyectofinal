@@ -3,13 +3,16 @@ import { NavLink } from "react-router-dom";
 import "../styles/Footer.scss";
 
 const Footer = () => {
-
-  const Mailto = ({ email, subject = '', body = '', children }) => {
-    let params = subject || body ? '?' : '';
+  const Mailto = ({ email, subject = "", body = "", children }) => {
+    let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
-    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
-  
-    return <li className="footer__li" href={`mailto:${email}${params}`}>{children}</li>;
+    if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
+
+    return (
+      <li className="footer__li" href={`mailto:${email}${params}`}>
+        {children}
+      </li>
+    );
   };
 
   return (
@@ -27,13 +30,6 @@ const Footer = () => {
         <NavLink to="/" className="footer__links">
           <li className="footer__li">Localización</li>
         </NavLink>
-          <li className="footer__li footer__li__horario">Horario de atención al cliente</li>
-          <li className="footer__li footer__li__p">
-            <p>Lunes a viernes</p>
-            <p>09:00 a 21:00</p>
-            <p>Sabados, domingos y festivos</p>
-            <p>09:00 a 15:00</p>
-          </li>
       </ul>
       <ul className="footer__ul">
         <h3>Especialidades</h3>
@@ -92,13 +88,26 @@ const Footer = () => {
           <li className="footer__li">Login/Registro</li>
         </NavLink>
       </ul>
-      <ul className="footer__contact">
-        <p>Telefono:</p>
-        <span>902 02 02 02</span>
-        <p>E-mail:</p>
-        {<Mailto email="info@healthalgorithm.es" subject="Contacto desde web" body="">
-    info@healthalgorithm.es
-  </Mailto>}
+      <ul className="footer__ul">
+        <li className="footer__li footer__li__p">
+          <li className="footer__li footer__li__horario">Horario de atención al cliente</li>
+          <p>Lunes a viernes</p>
+          <p>09:00 a 21:00</p>
+          <p>Sabados, domingos y festivos</p>
+          <p>09:00 a 15:00</p>
+          <li className="footer__li">
+            <img className="footer__li__svg" src="../../assets/contact/phone.svg" alt="phone" />
+            <span>902 02 02 02</span>
+          </li>
+          <li className="footer__li">
+            <img className="footer__li__svg" src="../../assets/contact/mail.svg" alt="email" />
+            {
+              <Mailto email="info@healthalgorithm.es" subject="Contacto desde web" body="">
+                Email
+              </Mailto>
+            }
+          </li>
+        </li>
       </ul>
     </div>
   );
