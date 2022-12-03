@@ -16,7 +16,7 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
   };
 
   return (
-    <div className={menu ? "dropdownMenu active": "dropdownMenu"}>
+    <div className={menu ? "dropdownMenu active--menu": "dropdownMenu"}>
       <NavLink
         onClick={toggleMenu}
         activeclassname={"active"}
