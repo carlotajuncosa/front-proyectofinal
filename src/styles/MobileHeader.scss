@@ -8,6 +8,8 @@
     height: 80px;
     padding: 1em 0;
     background-color: $background-color;
+    border-bottom: $border;
+
     &__logo{
         padding: 0 1em;
         width: 200px;
