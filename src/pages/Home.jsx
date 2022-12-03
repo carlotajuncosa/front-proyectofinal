@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Map from "../componentes/Map";
 import "../styles/Home.scss";
 
@@ -15,7 +16,10 @@ const Home = () => {
         <video className="home__video--src" loop autoPlay muted>
           <source src="/assets/video_loalamos.mp4" type="video/mp4" />
         </video>
-        <button className="home__video--button">Pide cita</button>
+        <NavLink
+        to="/pedir-cita">
+        <button className="home--button primary_button">Pide cita</button>
+      </NavLink>
       </div>
       <h3>Especialidades</h3>
       <div className="home__specs">
@@ -54,7 +58,10 @@ const Home = () => {
           className="home__remote--img"
         ></img>
         <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos video consulta</h2>
-        <button className="home__remote--btn">Pide cita</button>
+        <NavLink
+        to="/pedir-cita">
+        <button className="home--button primary_button">Pide cita</button>
+      </NavLink>
       </div>
       <Map />
     </div>

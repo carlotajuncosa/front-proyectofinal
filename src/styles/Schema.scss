@@ -7,7 +7,7 @@ $unactive: #9b9b9b;
 
 $generalFont: 16px;
 
-.title{
+.title {
   text-align: center;
   padding: 20px;
 }
@@ -33,12 +33,26 @@ $generalFont: 16px;
 
 // <--- mixins --->
 
+$layout_bp_mobile_s: 400px;
 $layout_bp_mobile: 480px;
+$layout_bp_mobileLandscape: 750px;
 $layout_bp_tablet: 1004px;
 $layout_bp_desktop: 1500px;
 
+@mixin mobile_s {
+  @media only screen and (min-width: #{$layout_bp_mobile_s}) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media only screen and (min-width: #{$layout_bp_mobile}) {
+    @content;
+  }
+}
+
+@mixin mobileLandscape {
+  @media only screen and (min-width: #{$layout_bp_mobileLandscape}) {
     @content;
   }
 }
