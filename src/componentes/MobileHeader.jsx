@@ -34,7 +34,7 @@ const MobileHeader = () => {
           />
         </svg>
       </button>
-      {menu && <DropdownMenu toggleMenu={toggleMenu}/>}
+      <DropdownMenu toggleMenu={toggleMenu} menu={menu}/>
       </div>;
 };
 
