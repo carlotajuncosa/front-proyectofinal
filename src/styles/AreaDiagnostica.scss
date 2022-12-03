@@ -1,55 +1,66 @@
+@import "Schema.scss";
+
 .diag {
-    &__title {
-      padding: 50px;
-      text-align: center;
-    }
+  &__title {
+    padding: 50px;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
   
-    &__container {
-      display: flex;
-      flex-direction: column;
-    }
-  
+  @include tablet {
     &__box {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      padding-bottom: 10px;
     }
-    @media screen and (max-width: 821px) {
-      &__box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  
     &__box--text {
       width: 400px;
       height: 400px;
-      background-color: white;
-      padding-right: 20px;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      justify-content: center;
-      box-sizing: border-box;
-  
-      h3 {
-        padding-bottom: 10px;
-      }
-      p {
-      }
     }
-  
     &__box--img {
       width: 400px;
       height: 400px;
     }
-    &__img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  
   }
+
+  &__box--text {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    box-sizing: border-box;
+
+    h3 {
+      padding-bottom: 10px;
+    }
+    p {
+    }
+  }
+
+  &__box--img {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
