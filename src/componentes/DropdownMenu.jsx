@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/DropdownMenu.scss";
 
-const DropdownMenu = ({ toggleMenu }) => {
+const DropdownMenu = ({ toggleMenu, menu}) => {
   const Mailto = ({ email, subject = "", body = "", children }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
@@ -16,7 +16,7 @@ const DropdownMenu = ({ toggleMenu }) => {
   };
 
   return (
-    <div className="dropdownMenu">
+    <div className={menu ? "dropdownMenu active": "dropdownMenu"}>
       <NavLink
         onClick={toggleMenu}
         activeclassname={"active"}
@@ -38,7 +38,7 @@ const DropdownMenu = ({ toggleMenu }) => {
             width="16"
             height="16"
             fill="currentColor"
-            className="dropdownMenu__svg"
+            className="dropdownMenu__svg--x"
             viewBox="0 0 16 16"
           >
             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />

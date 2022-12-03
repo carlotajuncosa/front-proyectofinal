@@ -5,11 +5,16 @@
   flex-direction: column;
   position: absolute;
   top: 0;
-  right: 0;
-  width: 100%;
+  right: 100vw;
+  width: 100vw;
   height: 100vh;
   background-color: $background-color;
   z-index: 999;
+  -webkit-box-shadow: -5px 9px 21px -4px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -5px 9px 21px -4px rgba(0, 0, 0, 0.39);
+  box-shadow: -5px 9px 21px -4px rgba(0, 0, 0, 0.39);
+  transition: right 1.5s;
+
   &__logo {
     padding: 15px 0;
   }
@@ -40,33 +45,33 @@
     align-items: center;
     background-color: $background-color;
   }
-  
-  &__li{     
+
+  &__li {
     &__horario {
       padding-top: 0.5em;
       border-bottom: $border;
       font-weight: 600;
     }
   }
-  &__p{
+  &__p {
     font-size: 3em;
   }
-  
-  &__li--horario{
+
+  &__li--horario {
     padding-top: 20px;
     font-size: 1.5em;
     color: black;
   }
-  
+
   &__ul {
-    width:350px;
+    width: 350px;
     font-size: 0.8em;
     margin-left: 7px;
-    margin-top: 20px;;
+    margin-top: 20px;
     font-weight: 500;
     border-top: 1px solid black;
   }
-  
+
   &__mail {
     padding-top: 10px;
     display: flex;
@@ -81,14 +86,18 @@
     width: 20px;
     padding-right: 10px;
   }
-  &__svg--x{
+  &__svg--x {
     height: 30px;
     width: 30px;
-   }
-  &__links--email{
-  padding: 0; 
-  margin-left: -10px;
- }
- 
+  }
+  &__links--email {
+    padding: 0;
+    margin-left: -10px;
+  }
+}
+.active{
+  width: 100%;
+  right: 0;
   
+
 }
