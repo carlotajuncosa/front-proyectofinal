@@ -21,7 +21,7 @@ const CuadroMedico = () => {
   doctors.map((doctor) => {
     if (doctor.name.toLowerCase().includes(searchInputValue.toLowerCase()) ||
       doctor.surname.toLowerCase().includes(searchInputValue.toLowerCase())||
-      doctor.specialty.toLowerCase().includes(searchInputValue.toLowerCase())
+      doctor.specialty.toLowerCase().includes()
       ) {
       filteredDoctors.push(doctor);
     }

@@ -1,10 +1,8 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import "../styles/DoctorsCard.scss";
 
 const DoctorsCard = ({doctor}) => {
 
-    const navigate = useNavigate();
 
   return (
       <div className="doctors">
