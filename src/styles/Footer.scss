@@ -4,8 +4,8 @@
   margin: 0 auto;
   padding: 2em 0 1em;
   display: flex;
-  flex-direction: column; //! Mobile
-  align-content: center; //! Mobile
+  flex-direction: column;
+  align-content: center;
   justify-content: space-evenly;
   gap: 2em;
   border-top: $border;
