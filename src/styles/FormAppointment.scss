@@ -8,18 +8,19 @@
 }
 
 .formAppointment {
-  margin: 0 auto;
-  width: 50vw;
-  min-width: 300px;
-  height: 380px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  border-radius: 25px;
+  font-size: $generalFont;
+    margin: 0 auto;
+    font-size: 16px;
+    width: 50vw;
+    min-width: 300px;
+    height: 380px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 25px;
 
   @include tablet {
     width: 380px;
