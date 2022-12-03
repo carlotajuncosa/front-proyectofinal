@@ -4,10 +4,17 @@
   margin: 0 auto;
   padding: 2em 0 1em;
   display: flex;
+  flex-direction: column; //! Mobile
+  align-content: center; //! Mobile
   justify-content: space-evenly;
   gap: 2em;
   border-top: $border;
   flex-wrap: wrap;
+  
+  @include tablet {
+    flex-direction: row;
+    align-content: inherit;
+  }
 
   &__logo {
     img {
@@ -15,6 +22,11 @@
     }
     p{
       font-weight: 800;
+    }
+    text-align: center;
+
+    @include tablet {
+      text-align: inherit;
     }
   }
 
