@@ -1,12 +1,21 @@
 .doctors{
     display: flex;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 16px;
+/*     flex-direction: column; */
+    justify-content: center;
 
     img{
-        width: 300px;
+        width: 200px;
+        border-radius: 500px;
+
     }
 
     &__info {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+
 }
