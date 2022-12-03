@@ -3,9 +3,26 @@ import { NavLink } from "react-router-dom";
 import "../styles/DropdownMenu.scss";
 
 const DropdownMenu = ({ toggleMenu }) => {
+  const Mailto = ({ email, subject = "", body = "", children }) => {
+    let params = subject || body ? "?" : "";
+    if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
+
+    return (
+      <li className="dropdownMenu__li" href={`mailto:${email}${params}`}>
+        {children}
+      </li>
+    );
+  };
+
   return (
     <div className="dropdownMenu">
-      <NavLink onClick={toggleMenu} activeclassname={"active"} to="/" className="dropdownMenu__logo">
+      <NavLink
+        onClick={toggleMenu}
+        activeclassname={"active"}
+        to="/"
+        className="dropdownMenu__logo"
+      >
         <img
           className="dropdownMenu__img"
           src="../../assets/logo/logo_header.svg"
@@ -84,6 +101,41 @@ const DropdownMenu = ({ toggleMenu }) => {
           Contacto
         </NavLink>
       </nav>
+      <ul className="dropdownMenu__ul">
+        <li className="dropdownMenu__li dropdownMenu__li--horario">
+          Horario de atención al cliente
+        </li>
+        <p className="dropdownMenu__links">Lunes a viernes</p>
+        <p className="dropdownMenu__links">09:00 a 21:00</p>
+        <p className="dropdownMenu__links">Sabados, domingos y festivos</p>
+        <p className="dropdownMenu__links">09:00 a 15:00</p>
+        <li className="dropdownMenu__links">
+          <img
+            className="dropdownMenu__li--svg"
+            src="../../assets/contact/phone.svg"
+            alt="phone"
+          />
+          <span>902 02 02 02</span>
+        </li>
+        <li className="dropdownMenu__li">
+          <div className="dropdownMenu__mail">
+            <img
+              className="dropdownMenu__li--svg"
+              src="../../assets/contact/mail.svg"
+              alt="email"
+            />
+            {
+              <Mailto
+                email="info@healthalgorithm.es"
+                subject="Contacto desde web"
+                body=""
+              >
+              <p className="dropdownMenu__links dropdownMenu__links--email">Email</p>
+              </Mailto>
+            }
+          </div>
+        </li>
+      </ul>
     </div>
   );
 };
