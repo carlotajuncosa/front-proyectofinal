@@ -50,7 +50,6 @@ const Home = () => {
         <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos video consulta</h2>
         <button className="home__remote--btn">Pide cita</button>
       </div>
-    <h3>Nuestras clínicas</h3>
       <Map />
     </div>
   );

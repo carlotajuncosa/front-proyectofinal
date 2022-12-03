@@ -30,7 +30,6 @@ const Centro = () => {
         <p className="centro__horario--info">Sabados, domingos y festivos 09:00 a 15:00</p>
       </div>
     <FormContact />
-    <h3>Nuestras Clínicas</h3>
     <Map />
     </div>
   )
