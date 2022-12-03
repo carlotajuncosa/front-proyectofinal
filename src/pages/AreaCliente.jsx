@@ -4,12 +4,14 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ButtonLogout from "../componentes/ButtonLogout";
 import { useSelector } from "react-redux";
+import "../styles/Schema.scss";
 
 const AreaCliente = () => {
   const { user, token } = useSelector((state) => state.auth);
 
   return (
     <>
+    <h2 className="title">Área Cliente</h2>
       {!user && <FormLogin type="login" />}
       {user && (
         <>

@@ -52,7 +52,7 @@ const CuadroMedico = () => {
           </div>
         )}
       </>
-      
+      <h2 className='title'>Cuadro Medico</h2>
       <div className='medicalChart__search'>
       </div>
         <FormContact />

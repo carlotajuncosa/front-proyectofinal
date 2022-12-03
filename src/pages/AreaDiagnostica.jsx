@@ -4,7 +4,7 @@ import "../styles/AreaDiagnostica.scss";
 const Areadiagnostica = () => {
   return (
     <div className="diag">
-      <h2 className="diag__title">Área Diagnóstica</h2>
+      <h2 className="title">Área Diagnóstica</h2>
       <div className="diag__content">
           <div className='diag__content--img'>
             <img src="https://img.saludsavia.com/wp-content/uploads/2019/06/Chequeo-Medico-Completo.jpg" alt="chequeo"></img>
