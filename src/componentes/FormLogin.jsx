@@ -38,7 +38,10 @@ const FormLogin = ({ type }) => {
       <div className="formLogin">
       {isLoading && (
         <>
-          <h2>CARGANDO...</h2>
+        <div className="formLogin__form">
+          <h4>Espere un momento mientras le ubicamos en nuestra base de datos</h4>
+          <p>Gracias por su paciencia</p>
+          </div>
         </>
       )}
       {!isLoading && (
@@ -90,6 +93,10 @@ const FormLogin = ({ type }) => {
                   id="password"
                   {...register("password", {
                     required: "Introduce tu contraseña",
+                    minLength: {
+                      value: 8,
+                      message: "Introduce mínimo 8 caracteres",
+                    },
                   })}
                 />
                 {errors.password ? <p>Contraseña incorrecta</p> : null}
