@@ -4,6 +4,8 @@ import "../styles/Map.scss";
 
 const Map = () => {
   return (
+    <>
+    <h3>Nuestras Clínicas</h3>
     <div id="map">
           <MapContainer
         center={[40.183055885239856, -3.6883233692751243]}
@@ -37,6 +39,7 @@ const Map = () => {
         </Marker>
       </MapContainer>
     </div>
+    </>
   );
 };
 
