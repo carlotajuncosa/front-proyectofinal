@@ -12,24 +12,23 @@ $generalFont: 16px;
   padding: 20px;
 }
 
-.primary_button{
-    border: none;
-    border-radius: 25px;
-    padding: 0.52em 2em;
-    margin: 1em 0;
-    cursor: pointer;
-    color: $unactive;
-    font-weight: 600;
-    background-color: $background-color;
-    border: 1px solid $base-color;
-    transition: ease-in 500ms;
-    
+.primary_button {
+  border: none;
+  border-radius: 25px;
+  padding: 0.52em 2em;
+  margin: 1em 0;
+  cursor: pointer;
+  color: $unactive;
+  font-weight: 600;
+  background-color: $background-color;
+  border: 1px solid $base-color;
+  transition: ease-in 500ms;
 
-    &:valid {
-        color: white;
-        background-color: $base-color;
-        border: 1px solid $secondary-color;
-      }
+  &:valid {
+    color: white;
+    background-color: $base-color;
+    border: 1px solid $secondary-color;
+  }
 }
 
 // <--- mixins --->
@@ -39,10 +38,10 @@ $layout_bp_tablet: 1000px;
 $layout_bp_desktop: 1500px;
 
 @mixin mobile {
-    @media only screen and (min-width: #{$layout_bp_mobile}) {
-      @content;
-    }
+  @media only screen and (min-width: #{$layout_bp_mobile}) {
+    @content;
   }
+}
 
 @mixin tablet {
   @media only screen and (min-width: #{$layout_bp_tablet}) {

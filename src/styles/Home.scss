@@ -78,6 +78,44 @@
     }
   }
 
+    &__video{
+        position: relative;
+        overflow: hidden;
+        min-height: max-content;
+        max-height: 73vh;
+
+        &--button{
+            position: absolute;
+            left: 25%;
+            top: 75%;
+            padding: 5px;
+            width: 50%;
+            background-color: $base-color;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            transition: ease 1s;
+            border: none;
+
+            @include tablet{
+                left: 25%;
+                top: 85%;
+            }
+
+            @include desktop{
+                left: 27%;
+                top: 90%;
+            }
+
+            &:hover{
+                background-color: white;
+                color: $base-color;
+            }
+        }
+    }
+    }
+
   h3 {
     text-align: center;
     padding: 10px;
