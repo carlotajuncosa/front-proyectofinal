@@ -78,43 +78,42 @@
     }
   }
 
-    &__video{
-        position: relative;
-        overflow: hidden;
-        min-height: max-content;
-        max-height: 73vh;
+  &__video {
+    position: relative;
+    overflow: hidden;
+    min-height: max-content;
+    max-height: 73vh;
 
-        &--button{
-            position: absolute;
-            left: 25%;
-            top: 75%;
-            padding: 5px;
-            width: 50%;
-            background-color: $base-color;
-            cursor: pointer;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: white;
-            transition: ease 1s;
-            border: none;
+    &--button {
+      position: absolute;
+      left: 25%;
+      top: 75%;
+      padding: 5px;
+      width: 50%;
+      background-color: $base-color;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      transition: ease 1s;
+      border: none;
 
-            @include tablet{
-                left: 25%;
-                top: 85%;
-            }
+      @include tablet {
+        left: 25%;
+        top: 85%;
+      }
 
-            @include desktop{
-                left: 27%;
-                top: 90%;
-            }
+      @include desktop {
+        left: 27%;
+        top: 90%;
+      }
 
-            &:hover{
-                background-color: white;
-                color: $base-color;
-            }
-        }
+      &:hover {
+        background-color: white;
+        color: $base-color;
+      }
     }
-    }
+  }
 
   h3 {
     text-align: center;
@@ -133,9 +132,9 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 10px 50px;
 
-        @include mobile {
-            grid-template-columns: repeat(2, 1fr);
-        }
+      @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       @include tablet {
         grid-template-columns: repeat(3, 1fr);
@@ -145,8 +144,6 @@
     p {
       padding-top: 0.5em;
       font-size: 1.5em;
-
-
     }
 
     &--img {
@@ -162,7 +159,7 @@
         height: 100%;
 
         @include mobile {
-            width: 12vw;
+          width: 12vw;
         }
       }
     }
