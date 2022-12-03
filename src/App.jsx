@@ -26,7 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <h1>A DORMIR!!</h1>
+      {/* <Header />
       <MobileHeader />
       <Routes>
         <Route path="" element={<Home />} />
@@ -38,7 +39,7 @@ function App() {
         <Route path="/pedir-cita" element={<PedirCita />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
