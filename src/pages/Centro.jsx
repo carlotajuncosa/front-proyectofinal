@@ -6,7 +6,7 @@ import Map from '../componentes/Map';
 const Centro = () => {
   return (
     <div className="centro">
-      <h2 className="centro__title">Historia</h2>
+      <h2 className="title">Historia</h2>
       <div className="centro__content">
         <img src="https://www.vitafertilidad.com/wp-content/uploads/2016/10/salud-1.jpg" alt="clínica"></img>
         <p className="centro__content--info">     

@@ -10,7 +10,7 @@ const Contacto = () => {
     <div className='contact'>
     <ul className="contact__ul">
         <li className="contact__ul--li">
-          tel: 900 302 013 / info@healthalgorithm.es
+          Tel: 900 302 013 / info@healthalgorithm.es
         </li>
       </ul>
     </div>

@@ -1,8 +1,7 @@
+@import "./Schema.scss";
+
 .especialidades {
-  &__title {
-    padding: 50px;
-    text-align: center;
-  }
+  
   &__container {
     display: flex;
     flex-direction: column;
