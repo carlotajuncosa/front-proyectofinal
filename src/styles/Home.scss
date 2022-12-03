@@ -1,27 +1,82 @@
 @import "Schema.scss";
-.home{
-    margin: 0 auto;
-    width: 90%;
+.home {
+  margin: 0 auto;
+  width: 90%;
+  font-size: $generalFont;
 
-    &__ul{
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 0.5em 0;
-        
-        &--li{
-            background-color: $base-color;
-            padding: 10px;
-            font-size: 26px;
-            color: white;
-           
-            span{
-                font-weight: 700;
-            }
-        }
+  &__ul {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0.5em 0;
+
+    &--li {
+      background-color: $base-color;
+      padding: 10px;
+      font-size: 26px;
+      color: white;
+
+      span {
+        font-weight: 700;
+      }
     }
+  }
+
+  &__video {
+    position: relative;
+    overflow: hidden;
+    min-height: max-content;
+    max-height: 73vh;
+
+    // @include tablet{
+    //     left: 25%;
+    //     top: 85%;
+    // }
+
+    // @include desktop{
+    //     left: 27%;
+    //     top: 90%;
+    // }
+
+    &--button {
+      position: absolute;
+      left: 25%;
+      top: 75%;
+      padding: 5px;
+      width: 50%;
+      background-color: $base-color;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      transition: ease 1s;
+      border: none;
+
+      @include tablet {
+        left: 25%;
+        top: 85%;
+      }
+
+      @include desktop {
+        left: 27%;
+        top: 90%;
+      }
+
+      &:hover {
+        background-color: white;
+        color: $base-color;
+      }
+    }
+
+    &--src {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
 
     &__video{
         position: relative;
@@ -58,109 +113,126 @@
                 color: $base-color;
             }
         }
+    }
+    }
 
-        &--src {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: auto;
+  h3 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  &__specs {
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.8em 0;
+    display: flex;
+    justify-content: center;
+
+    &--wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px 50px;
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
         }
-    }
 
-    h3{
-        text-align: center;
-        padding: 10px;
-    }
-
-    &__specs{
-        margin-top: 10px;
-        display: grid;
+      @include tablet {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-
-        &--img{
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            img{
-                width: 80%;
-                height: 80%;
-                object-fit: contain;
-            }
-        }
-
-        &--info{
-            text-transform: capitalize;
-        }
+      }
     }
 
-    &__remote{
-        width: 90%;
-        margin: 0 auto;
-        position: relative;
-        padding: 10px;
+    p {
+      padding-top: 0.5em;
+      font-size: 1.5em;
 
 
-        img{
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
-        }
-
-        &--h2{
-            position: absolute;
-            top: 55%;
-            left: 10%;
-            font-size: 2.3vw;
-            color: $grey;
-            text-transform: uppercase;       
-            
-            @include tablet{
-                font-size: 2.4vw;
-                top: 70%;
-                left: 10%;
-            }
-
-            @include desktop{
-                top: 75%;
-                left: 10%;
-                text-transform: capitalize;
-            }
-        }
-
-        &--btn{
-            position: absolute;
-            left: 25%;
-            top: 75%;
-            width: 50%;
-            background-color: $base-color;
-            padding: 5px;
-            cursor: pointer;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: white;
-            transition: ease 1s;
-            border: none;
-
-            @include tablet{
-                left: 25%;
-                top: 85%;
-            }
-
-            @include desktop{
-                left: 27%;
-                top: 90%;
-            }
-
-            &:hover{
-                background-color: white;
-                color: $base-color;
-            }
-        }
     }
-  
+
+    &--img {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 30vw;
+        height: 100%;
+
+        @include mobile {
+            width: 12vw;
+        }
+      }
+    }
+
+    &--info {
+      text-transform: capitalize;
+    }
+  }
+
+  &__remote {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    &--h2 {
+      position: absolute;
+      top: 55%;
+      left: 10%;
+      font-size: 2.3vw;
+      color: $grey;
+      text-transform: uppercase;
+
+      @include tablet {
+        font-size: 2.4vw;
+        top: 70%;
+        left: 10%;
+      }
+
+      @include desktop {
+        top: 75%;
+        left: 10%;
+        text-transform: capitalize;
+      }
+    }
+
+    &--btn {
+      position: absolute;
+      left: 25%;
+      top: 75%;
+      width: 50%;
+      background-color: $base-color;
+      padding: 5px;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      transition: ease 1s;
+      border: none;
+
+      @include tablet {
+        left: 25%;
+        top: 85%;
+      }
+
+      @include desktop {
+        left: 27%;
+        top: 90%;
+      }
+
+      &:hover {
+        background-color: white;
+        color: $base-color;
+      }
+    }
+  }
 }
