@@ -1,6 +1,7 @@
 @import "Schema.scss";
 
 .formContact {
+  font-size: $generalFont;
   margin: 0 auto;
   width: 50vw;
   min-width: 300px;
@@ -24,9 +25,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(50vw - 2px);
-    min-width: 298px;
-    height: 498px;
+    width: calc(50vw - 5px);
+    min-width: 295px;
+    height: 495px;
     background-color: $background-color;
     z-index: 2;
     border-radius: 25px;

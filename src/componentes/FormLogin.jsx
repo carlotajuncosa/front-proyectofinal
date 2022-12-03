@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/FormLogin.scss";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser, newUser } from "../redux/auth/auth.actions";
 
@@ -12,6 +12,8 @@ const FormLogin = ({ type }) => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm();
+
+  const { isLoading } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -34,6 +36,13 @@ const FormLogin = ({ type }) => {
   return (
     <div className="formLogin__box">
       <div className="formLogin">
+      {isLoading && (
+        <>
+          <h2>CARGANDO...</h2>
+        </>
+      )}
+      {!isLoading && (
+        <>
         {form === "login" && (
           <>
             <form className="formLogin__form" onSubmit={handleSubmit(login)}>
@@ -178,6 +187,8 @@ const FormLogin = ({ type }) => {
             </form>
           </>
         )}
+        </>
+      )}
       </div>
     </div>
   );

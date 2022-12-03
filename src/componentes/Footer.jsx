@@ -97,7 +97,7 @@ const Footer = () => {
           <p>09:00 a 15:00</p>
           <li className="footer__li">
             <img className="footer__li__svg" src="../../assets/contact/phone.svg" alt="phone" />
-            <span>902 02 02 02</span>
+            <span><a href="tel:902-02-02-02">902 02 02 02</a></span>
           </li>
           <li className="footer__li">
           <div className="footer__mail">
