@@ -84,13 +84,24 @@
     }
 
     &__specs{
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        // width: 80%;
         gap: 10px;
+        padding: 0.8em 0;
+
+        &--wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        p{
+            padding-top: 0.5em;
+            font-size: 2em;
+        }
 
         &--img{
             margin: 0 auto;
+            width: 30vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -98,9 +109,7 @@
             cursor: pointer;
 
             img{
-                width: 80%;
-                height: 80%;
-                object-fit: contain;
+                height: 60%;
             }
         }
 
