@@ -52,6 +52,12 @@
     }
   }
 
+  &__links {
+    &:hover{
+      font-weight: initial;
+    }
+  }
+
   &__contact {
     display: flex;
     flex-direction: column;
