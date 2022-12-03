@@ -6,21 +6,25 @@
 
   &--button {
     position: absolute;
-    left: 37.5%;
-    top: 75%;
-    padding: 5px;
-    width: 25%;
+    left: 32.5%;
+    top: 65%;
+    padding: 0 !important;
+    width: 35%;
     background-color: $base-color;
     cursor: pointer;
-    font-weight: 700;
-    text-transform: uppercase;
     color: white;
     transition: ease 1s;
     border: none;
 
+    @include mobile{
+      top: 75%;
+    }
+
     @include tablet {
       left: 37.5%;
       top: 85%;
+      width: 25%;
+      padding: 3px !important;
     }
   }
 
@@ -130,17 +134,23 @@
 
     &--h2 {
       position: absolute;
-      top: 75%;
+      top: 55%;
       text-align: center;
       left: 0;
       right: 0;
-      font-size: 2vw;
+      font-size: 3vw;
       color: black;
       text-transform: uppercase;
+
+      @include mobile {
+        top: 72%;
+        font-size: 2vw;
+      }
 
       @include tablet {
         font-size: 2.4vw;
         text-align: center;
+        top: 80%;
         left: 0;
         right: 0;
         text-transform: capitalize;
