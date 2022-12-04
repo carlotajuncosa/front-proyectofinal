@@ -17,6 +17,7 @@ import { checkSession } from "./redux/auth/auth.actions";
 import { useNavigate } from "react-router-dom/dist";
 import SpecsTemplate from "./componentes/SpecsTemplate";
 import Appointments from "./componentes/Appointments";
+import Chatbot from "./componentes/Chatbot";
 
 function App() {
   const dispatch = useDispatch();
@@ -130,6 +131,7 @@ function App() {
                médico con un endoscopio (un tubo flexible con una cámara) para
                ver el revestimiento de la parte superior del aparato digestivo." />} />
       </Routes>
+      <Chatbot />
       <Footer />
     </div>
   );
