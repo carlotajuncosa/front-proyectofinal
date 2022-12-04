@@ -50,22 +50,22 @@ const Footer = () => {
       </ul>
       <ul className="footer__ul">
         <h3>Area Diagnóstica</h3>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/chequeo" className="footer__links">
           <li className="footer__li">Chequeo General</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/hemocardio" className="footer__links">
           <li className="footer__li">Hemodinámica/Cardiología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/imagen" className="footer__links">
           <li className="footer__li">Diagnóstico por imagen</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/analisis" className="footer__links">
           <li className="footer__li">Analisis Clínicos</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/patologica" className="footer__links">
           <li className="footer__li">Anatomía Patologica</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/endoscopia" className="footer__links">
           <li className="footer__li">Endoscopia</li>
         </NavLink>
       </ul>

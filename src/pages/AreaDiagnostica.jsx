@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/AreaDiagnostica.scss";
+import { NavLink } from "react-router-dom";
 
 const AreaDiagnostica = () => {
   return (
@@ -15,7 +16,9 @@ const AreaDiagnostica = () => {
             ></img>
           </div>
           <div className="diag__box--text">
-            <h3 className="diag__box--title">Chequeo General</h3>
+          <NavLink to="/chequeo" className="footer__links">
+            <h3 className="diag__box--title">Chequeo General</h3>  
+          </NavLink> 
             <p className="diag__box--p">
               Los Chequeos Generales están orientados a evaluar tu estado de
               salud y prevenir algunas patologías asociadas a tu tipo de
@@ -26,8 +29,10 @@ const AreaDiagnostica = () => {
         </div>
         <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
+          <NavLink to="/hemocardio" className="footer__links">
             <h3 className="diag__box--title">Hemodinámica</h3>
-            <h3 className="diag__box--title">& Cardiología</h3>
+            <h3 className="diag__box--title">& Cardiología</h3> 
+          </NavLink>
             <p className="diag__box--p">
               El estudio y tratamiento de la enfermedad de las arterias
               coronarias se efectúa con una técnica mínimamente invasiva.
@@ -53,7 +58,9 @@ const AreaDiagnostica = () => {
             ></img>
           </div>
           <div className="diag__box--text">
+          <NavLink to="/imagen" className="footer__links">
             <h3 className="diag__box--title">Diagnóstico por imagen</h3>
+          </NavLink>
             <p className="diag__box--p">
               El diagnóstico por imágenes permite a los profesionales de la
               salud observar el interior del cuerpo para buscar indicios de una
@@ -66,7 +73,9 @@ const AreaDiagnostica = () => {
         </div>
         <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
+          <NavLink to="/analisis" className="footer__links">
             <h3 className="diag__box--title">Análisis Clínicos</h3>
+          </NavLink>
             <p className="diag__box--p">
               En un primer acercamiento, podemos decir que el análisis clínico
               es un tipo de prueba exploratoria que consiste en la toma de
@@ -93,7 +102,9 @@ const AreaDiagnostica = () => {
             ></img>
           </div>
           <div className="diag__box--text">
+          <NavLink to="/patologica" className="footer__links">
             <h3 className="diag__box--title">Anatomía Patológica</h3>
+          </NavLink>
             <p className="diag__box--p">
               La anatomía patológica es un área de la medicina que estudia las
               bases morfológicas de la enfermedad. El origen de la anatomía
@@ -104,7 +115,9 @@ const AreaDiagnostica = () => {
         </div>
         <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
-            <h3 className="diag__box--title">Endoscopia</h3>
+          <NavLink to="/endoscopia" className="footer__links">
+            <h3 className="diag__box--title">Endoscopia</h3>  
+          </NavLink>
             <p className="diag__box--p">
               La endoscopia gastrointestinal es un procedimiento que hace el
               médico con un endoscopio (un tubo flexible con una cámara) para
