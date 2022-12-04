@@ -28,6 +28,15 @@ const Map = () => {
           <Marker position={[43.009519587392404, -7.557221379411343]}>
             <Popup>Clínica HEALTH ALGORITHM Lugo</Popup>
           </Marker>
+          <Marker position={[25.6527143830878, 51.487856377369624]}>
+            <Popup>Clínica HEALTH ALGORITHM Doha</Popup>
+          </Marker>
+          <Marker position={[31.184425776437255, 121.49235751254024]}>
+            <Popup>Clínica HEALTH ALGORITHM Shanghái</Popup>
+          </Marker>
+          <Marker position={[-34.60974344235063, -58.402107670795026]}>
+            <Popup>Clínica HEALTH ALGORITHM Buenos Aires</Popup>
+          </Marker>
         </MapContainer>
       </div>
     </>
