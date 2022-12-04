@@ -5,28 +5,23 @@
   border-radius: 16px;
   margin: 20px 0;
   border: 3px solid $base-color;
-  background-color: bisque;
-  align-items: center;
   width: 300px;
   height: 300px;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   &__box--img {
-    border: 2px green solid;
     width: 190px;
     height: 190px;
     margin: 10px;
-/*     border-radius: 50%;
- */    object-fit: cover;
-
+    object-fit: cover;
   }
   &__img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-        border-radius: 50%;
-
-    /* height: 150px; */
+    border-radius: 50%;
   }
 
   &__info {
