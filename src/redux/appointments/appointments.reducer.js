@@ -6,6 +6,8 @@ const INITIAL_STATE = {
 
 const appointmentsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+
+    // GET APPOINTMENTS
     case "gettingAppointments":
       return { ...state, isLoading: true };
     case "getAppointments":
@@ -22,6 +24,8 @@ const appointmentsReducer = (state = INITIAL_STATE, action) => {
         appointments: [],
         error: action.payload,
       };
+    
+    // NEW APPOINTMENT
     case "new_appointments_start":
       return {
         ...state,
@@ -38,6 +42,25 @@ const appointmentsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: action.payload,
+      };
+
+    //EDIT APPOINTMENT
+    case "edit_appointment_start":
+      return {
+      ...state,
+      isLoading: true
+    };
+    case "edit_appointments_ok":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+      };
+    case "edit_appointments_error":
+      return{
+        ...state,
+        isLoading: false,
+        error: action.payload
       };
 
     default:
