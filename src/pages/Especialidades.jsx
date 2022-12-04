@@ -139,7 +139,7 @@ const Especialidades = () => {
           </div>
           <div className="especialidades__box--text">
           <NavLink to="/ginecologia" className="footer__links">
-            <h3>Ginecologia</h3>
+            <h3>Ginecología</h3>
           </NavLink> 
             <p>
               La Ginecología hace referencia a la especialidad médica y
