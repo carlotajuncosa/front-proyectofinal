@@ -17,7 +17,7 @@ export const newAppointment = (formdata, navigate) => async (dispatch) => {
     const result = await API.post("appointments/create", formdata);
     console.log(result);
     dispatch({ type: "register_appointments_ok" });
-    navigate("/");
+    navigate("/area-cliente");
   } catch (error) {
     dispatch({ type: "register_appointments_error" });
   }
