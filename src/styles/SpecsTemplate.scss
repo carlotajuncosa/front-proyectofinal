@@ -54,8 +54,14 @@
         border-top: none;
         padding: 0px;
         margin-top: 0px;
-
-
       }
+  }
+
+  .doctors{
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    gap: 10px;
   }
 }
