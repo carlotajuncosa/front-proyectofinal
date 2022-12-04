@@ -112,7 +112,7 @@ const Chatbot = () => {
         id: "10",
         component: (
           <div>
-            <NavLink to="/">
+            <NavLink to="/centro">
               Nuestra historia
             </NavLink>
           </div>
