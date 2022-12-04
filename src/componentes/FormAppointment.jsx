@@ -40,7 +40,7 @@ const FormAppointment = () => {
             <option disabled selected value> -- selecciona una opción -- </option>
             <option id="specialty">Cardiología</option>
             <option id="specialty">Traumatología</option>
-            <option id="specialty">Neurología</option>
+            <option id="specialty">Dermatología</option>
             <option id="specialty">Psiquiatría</option>
             <option id="specialty">Gastroenterología</option>
             <option id="specialty">Ginecología</option>
