@@ -1,0 +1,25 @@
+@import "Schema.scss";
+
+.appointments{
+    display: flex;
+    flex-direction: column;
+
+    &__cards{
+        margin-bottom: 20px;
+        border: solid 3px $base-color;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 16px;
+
+        &--info{
+            font-size: 20px;
+            line-height : 25px;
+
+            span{
+                color: $base-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
