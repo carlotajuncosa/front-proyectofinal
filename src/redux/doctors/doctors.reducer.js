@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   const doctorsReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
       case "gettingDoctors":
-        return { ...state, isLoading: true };
+        return { ...INITIAL_STATE, isLoading: true };
       case "getDoctors":
         return {
           ...state,
