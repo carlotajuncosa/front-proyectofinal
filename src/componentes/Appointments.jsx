@@ -7,8 +7,8 @@ import { getAppointments } from '../redux/appointments/appointments.actions';
 const Appointments = () => {
 
     const dispatch = useDispatch();
-    const { appointments, isLoading, error } = useSelector((state) => state.appointments)
-    
+    const { appointments, isLoading, error } = useSelector((state) => state.appointments);
+
     useEffect(() => {
         dispatch(getAppointments());
     }, []);
