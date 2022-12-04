@@ -6,7 +6,7 @@ import "../styles/SpecsTemplate.scss";
 import { useNavigate } from "react-router-dom";
 import DoctorsCard from "./DoctorsCard";
 
-const SpecsTemplate = ({ title, img, desc }) => {
+const SpecsTemplate = ({ title, img, desc, hide }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { doctors, isLoading } = useSelector((state) => state.doctors);
@@ -20,6 +20,7 @@ const SpecsTemplate = ({ title, img, desc }) => {
 
   useEffect(() => {
     doctors.map((doctor) => {
+      
       if (doctor?.specialty?.toLowerCase().includes(title.substr(0, (title.length - 3)).toLowerCase())) {
         filteredDoctors.push(doctor);
       }
@@ -40,7 +41,7 @@ const SpecsTemplate = ({ title, img, desc }) => {
       <button className="primary_button" onClick={() => navigate(-1)}>
         Volver
       </button>
-      {!isLoading && doctorsInfo &&
+      {!hide && !isLoading && doctorsInfo &&
         doctorsInfo.map((doctor) => {
           return <DoctorsCard key={doctor._id} doctor={doctor} />;
         })}

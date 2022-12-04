@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom/dist";
 import SpecsTemplate from "./componentes/SpecsTemplate";
 import Appointments from "./componentes/Appointments";
 import Chatbot from "./componentes/Chatbot";
+import Cookies from "./componentes/Cookies";
 
 function App() {
   const dispatch = useDispatch();
@@ -86,6 +87,7 @@ function App() {
                      el parto y el puerperio de la mujer (periodo desde el parto hasta que la mujer regresa a su estado anterior a la gestación)." />} />
         <Route path="/user/client/{:id}/citas" element={<Appointments />} />
         <Route path="/chequeo" element={<SpecsTemplate 
+              hide="true"
                title="Chequeo General" 
                img="https://img.saludsavia.com/wp-content/uploads/2019/06/Chequeo-Medico-Completo.jpg"
                desc="Los Chequeos Generales están orientados a evaluar tu estado de
@@ -93,6 +95,7 @@ function App() {
                trabajo, sexo, edad, estilo de vida e historia clínica personal y
                familiar." />} />
         <Route path="/hemocardio" element={<SpecsTemplate 
+        hide="true"
                title="Hemodinámica / Cardiología" 
                img="https://www.clinicapremium.com/wp-content/uploads/2019/03/especialidad-de-cardiologia-en-marbella.jpg"
                desc="El estudio y tratamiento de la enfermedad de las arterias
@@ -101,6 +104,7 @@ function App() {
                cardíacos diagnósticos y se interviene en las arterias coronarias
                con implantación de stents o de las válvulas del corazón." />} />
         <Route path="/imagen" element={<SpecsTemplate 
+        hide="true"
                title="Diagnóstico por imagen" 
                img="https://www.topdoctors.mx/files/Image/large/4c6934060ae163b5675ba58855babe70.jpg"
                desc="El diagnóstico por imágenes permite a los profesionales de la
@@ -110,6 +114,7 @@ function App() {
                tipo de imagen que use el médico dependerá de sus síntomas y de la
                parte del cuerpo que debe examinarse." />} />
         <Route path="/analisis" element={<SpecsTemplate 
+        hide="true"
                title="Análisis Clínicos" 
                img="https://www.lgs-analisis.es/wp-content/uploads/2019/09/2553-1-750x375.jpg"
                desc="En un primer acercamiento, podemos decir que el análisis clínico
@@ -119,6 +124,7 @@ function App() {
                la información necesaria para aplicar un determinado tratamiento o
                cualquier otro procedimiento terapéutico." />} />
         <Route path="/patologica" element={<SpecsTemplate 
+        hide="true"
                title="Análisis Patológica" 
                img="https://www.ceac.es/sites/default/files/2022-07/CEACBLOG-diferencia-anatomia-patologica-laboratorio-clinico-0722.jpg.webp"
                desc="La anatomía patológica es un área de la medicina que estudia las
@@ -126,6 +132,7 @@ function App() {
                patológica es tan antiguo como la medicina, ya que se basa en la
                observación directa del órgano enfermo." />} />
         <Route path="/endoscopia" element={<SpecsTemplate 
+        hide="true"
                title="Endoscopia" 
                img="https://www.65ymas.com/uploads/s1/14/49/33/bigstock-team-of-doctors-performing-end-253620625.jpeg"
                desc="La endoscopia gastrointestinal es un procedimiento que hace el
@@ -134,6 +141,7 @@ function App() {
       </Routes>
       <Chatbot />
       <Footer />
+      <Cookies />
     </div>
   );
 }
