@@ -8,7 +8,7 @@ const Footer = () => {
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
 
-    return <a href={`mailto:${email}${params}`}>{children}</a>;
+    return <a className="dropdownMenu__a" href={`mailto:${email}${params}`}>{children}</a>;
   };
 
   return (
@@ -86,22 +86,36 @@ const Footer = () => {
       </ul>
       <ul className="footer__ul">
         <li className="footer__li footer__li__p">
-          <li className="footer__li footer__li__horario">Horario de atención al cliente</li>
+          <li className="footer__li footer__li__horario">
+            Horario de atención al cliente
+          </li>
           <p>Lunes a viernes</p>
           <p>09:00 a 21:00</p>
           <p>Sabados, domingos y festivos</p>
           <p>09:00 a 15:00</p>
           <li className="footer__li">
-            <img className="footer__li__svg" src="../../assets/contact/phone.svg" alt="phone" />
+            <img
+              className="footer__li__svg"
+              src="../../assets/contact/phone.svg"
+              alt="phone"
+            />
             <span>
               <a href="tel:902-02-02-02"> 902 02 02 02</a>
             </span>
           </li>
           <li className="footer__li">
             <div className="footer__mail">
-              <img className="footer__li__svg" src="../../assets/contact/mail.svg" alt="email" />
+              <img
+                className="footer__li__svg"
+                src="../../assets/contact/mail.svg"
+                alt="email"
+              />
               {
-                <Mailto email="info@healthalgorithm.es" subject="Contacto desde footer de la web" body="Estoy interesado en recibir informacion relacionada con ...">
+                <Mailto
+                  email="info@healthalgorithm.es"
+                  subject="Contacto desde footer de la web"
+                  body="Estoy interesado en recibir informacion relacionada con ..."
+                >
                   Email
                 </Mailto>
               }

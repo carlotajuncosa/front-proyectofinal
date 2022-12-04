@@ -3,16 +3,13 @@ import { NavLink } from "react-router-dom";
 import "../styles/DropdownMenu.scss";
 
 const DropdownMenu = ({ toggleMenu, menu}) => {
+ 
   const Mailto = ({ email, subject = "", body = "", children }) => {
     let params = subject || body ? "?" : "";
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
 
-    return (
-      <li className="dropdownMenu__li" href={`mailto:${email}${params}`}>
-        {children}
-      </li>
-    );
+    return <a className="dropdownMenu__a--mail" href={`mailto:${email}${params}`}>{children}</a>;
   };
 
   return (
@@ -105,17 +102,17 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
         <li className="dropdownMenu__li dropdownMenu__li--horario">
           Horario de atención al cliente
         </li>
-        <p className="dropdownMenu__links">Lunes a viernes</p>
-        <p className="dropdownMenu__links">09:00 a 21:00</p>
-        <p className="dropdownMenu__links">Sábados, domingos y festivos</p>
-        <p className="dropdownMenu__links">09:00 a 15:00</p>
+        <p className="dropdownMenu__links dropdownMenu__links--inactive">Lunes a viernes</p>
+        <p className="dropdownMenu__links dropdownMenu__links--inactive">09:00 a 21:00</p>
+        <p className="dropdownMenu__links dropdownMenu__links--inactive">Sábados, domingos y festivos</p>
+        <p className="dropdownMenu__links dropdownMenu__links--inactive">09:00 a 15:00</p>
         <li className="dropdownMenu__links">
           <img
             className="dropdownMenu__li--svg"
             src="../../assets/contact/phone.svg"
             alt="phone"
           />
-          <span>902 02 02 02</span>
+          <a href="tel:902-02-02-02">902 02 02 02</a>
         </li>
         <li className="dropdownMenu__li">
           <div className="dropdownMenu__mail">
@@ -126,11 +123,13 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
             />
             {
               <Mailto
-                email="info@healthalgorithm.es"
-                subject="Contacto desde web"
-                body=""
+               email="info@healthalgorithm.es"
+                  subject="Contacto desde footer de la web"
+                  body="Estoy interesado en recibir informacion relacionada con ..."
+                  
+                  
               >
-              <p className="dropdownMenu__links dropdownMenu__links--email">Email</p>
+              Email
               </Mailto>
             }
           </div>
