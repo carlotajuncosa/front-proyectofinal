@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { checkSession } from "./redux/auth/auth.actions";
 import { useNavigate } from "react-router-dom/dist";
+import Appointments from "./componentes/Appointments";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function App() {
         <Route path="/area-cliente" element={<AreaCliente />} />
         <Route path="/pedir-cita" element={<PedirCita />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/user/client/{:id}/citas" element={<Appointments />} />
       </Routes>
       <Footer />
     </div>
