@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { checkSession } from "./redux/auth/auth.actions";
 import { useNavigate } from "react-router-dom/dist";
 import Appointments from "./componentes/Appointments";
+import Chatbot from "./componentes/Chatbot";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/user/client/{:id}/citas" element={<Appointments />} />
       </Routes>
+      <Chatbot />
       <Footer />
     </div>
   );
