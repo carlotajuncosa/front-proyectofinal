@@ -1,29 +1,47 @@
 @import "./Schema.scss";
 
 .doctor {
-    padding: 50px;
+  padding: 0 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    &__search{
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        
-        input{
-            width: 250px;
-            font-size: 15px;
-            text-align: center;
-            border: none;
-            border-bottom: 2px solid $base-color;
-            background-color: $background-color;
-        }
+  /* INPUT SEARCH */
+  &__search {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px 20px 20px;
 
-        input::placeholder {
-            text-align: center;
-            color: black;
-        }
+    input {
+      width: 250px;
+      font-size: 15px;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid $base-color;
+      background-color: $background-color;
     }
 
+    input::placeholder {
+      text-align: center;
+      color: black;
+    }
+  }
+  /* CONTAINER DOCTOR CARDS */
+  &__cards {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobileLandscape {
     &__cards {
-        gap: 100px;
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
     }
+  }
 }

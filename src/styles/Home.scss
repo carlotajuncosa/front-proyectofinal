@@ -79,7 +79,7 @@
     &--wrapper {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      gap: 10px calc(100vw / 3 / 2);
+      gap: 10px calc(50vw / 3 / 2);
 
       @include mobile {
         grid-template-columns: repeat(2, 1fr);

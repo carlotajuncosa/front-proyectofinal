@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Especialidades.scss";
+import { NavLink } from "react-router-dom";
 import FormContact from "../componentes/FormContact";
 const Especialidades = () => {
   return (
@@ -8,7 +9,9 @@ const Especialidades = () => {
       <div className="especialidades__container">
         <div className="especialidades__box">
           <div className="especialidades__box--text">
+          <NavLink to="/cardiologia" className="footer__links">
             <h3>Cardiología</h3>
+          </NavLink> 
             <p>
               La Cardiología es la especialidad que se encarga del estudio y
               tratamiento de las enfermedades cardiovasculares.
@@ -42,7 +45,9 @@ const Especialidades = () => {
             />
           </div>
           <div className="especialidades__box--text">
+          <NavLink to="/traumatologia" className="footer__links">
             <h3>Traumatología</h3>
+          </NavLink> 
             <p>
               La Cirugía Ortopédica es una rama de la cirugía que se refiere los
               desórdenes del aparato locomotor, es decir, de sus partes
@@ -58,7 +63,9 @@ const Especialidades = () => {
 
         <div className="especialidades__box">
           <div className="especialidades__box--text">
+          <NavLink to="/dermatologia" className="footer__links">
             <h3>Dermatología</h3>
+          </NavLink> 
             <p>
               La Dermatología es la especialidad médica encargada del estudio de
               la piel, su estructura, función y enfermedades
@@ -91,7 +98,9 @@ const Especialidades = () => {
             />
           </div>
           <div className="especialidades__box--text">
+          <NavLink to="/psiquiatria" className="footer__links">
             <h3>Psiquiatría</h3>
+          </NavLink> 
             <p>La psiquiatría es la rama de la medicina dedicada al estudio de 
               los trastornos mentales con el objetivo de prevenir, evaluar, diagnosticar, 
               tratar y rehabilitar a las personas con trastornos mentales y asegurar la autonomía 
@@ -101,7 +110,9 @@ const Especialidades = () => {
 
         <div className="especialidades__box">
           <div className="especialidades__box--text">
+          <NavLink to="/gastroenterologia" className="footer__links">
             <h3>Gastroenterología</h3>
+          </NavLink> 
             <p>
               La especialidad del aparato digestivo es la rama de la medicina
               que se ocupa del tubo digestivo, hígado, vías biliares y páncreas.
@@ -127,7 +138,9 @@ const Especialidades = () => {
             />
           </div>
           <div className="especialidades__box--text">
-            <h3>Ginecologia</h3>
+          <NavLink to="/ginecologia" className="footer__links">
+            <h3>Ginecología</h3>
+          </NavLink> 
             <p>
               La Ginecología hace referencia a la especialidad médica y
               quirúrgica que trata las enfermedades del sistema reproductor

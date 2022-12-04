@@ -1,40 +1,52 @@
 @import "./Schema.scss";
 
-.doctors{
+.doctors {
+  display: flex;
+  border-radius: 16px;
+  margin: 20px 0;
+  border: 3px solid $base-color;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__box--img {
+    width: 190px;
+    height: 190px;
+    margin: 10px;
+    object-fit: cover;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__info {
+    padding: 10px;
     display: flex;
-    border-radius: 16px;
-    gap: 30px;
-    margin-bottom: 5vh;
-    border: 3px solid $base-color;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
 
-    img{
-        width: 150px;
-        border-radius: 100px;
-        padding: 10px;
+    h4 {
+      font-size: 25px;
     }
 
-    &__info {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-
-        h4{
-            font-size: 25px;
-        }
-
-        span{
-            color: $base-color;
-            font-weight: bold;
-        }
+    span {
+      color: $base-color;
+      font-weight: bold;
     }
+  }
 }
 
 @media (max-width: 500px) {
-    .doctors {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .doctors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

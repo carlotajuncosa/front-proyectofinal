@@ -29,48 +29,48 @@ const Footer = () => {
       </ul>
       <ul className="footer__ul">
         <h3>Especialidades</h3>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/cardiologia" className="footer__links">
           <li className="footer__li">Cardiología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/traumatologia" className="footer__links">
           <li className="footer__li">Traumatología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
-          <li className="footer__li">Neurología</li>
+        <NavLink to="/dermatologia" className="footer__links">
+          <li className="footer__li">Dermatología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/psiquiatria" className="footer__links">
           <li className="footer__li">Psiquiatría</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/gastroenterologia" className="footer__links">
           <li className="footer__li">Gastroenterología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/ginecologia" className="footer__links">
           <li className="footer__li">Ginecología/Obstetricia</li>
         </NavLink>
       </ul>
       <ul className="footer__ul">
-        <h3>Area Diagnóstica</h3>
-        <NavLink to="/" className="footer__links">
+        <h3>Área Diagnóstica</h3>
+        <NavLink to="/chequeo" className="footer__links">
           <li className="footer__li">Chequeo General</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/hemocardio" className="footer__links">
           <li className="footer__li">Hemodinámica/Cardiología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/imagen" className="footer__links">
           <li className="footer__li">Diagnóstico por imagen</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/analisis" className="footer__links">
           <li className="footer__li">Analisis Clínicos</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/patologica" className="footer__links">
           <li className="footer__li">Anatomía Patologica</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/endoscopia" className="footer__links">
           <li className="footer__li">Endoscopia</li>
         </NavLink>
       </ul>
       <ul className="footer__ul">
-        <h3>Area Cliente</h3>
+        <h3>Área Cliente</h3>
         <NavLink to="/" className="footer__links">
           <li className="footer__li">Comunicación Directa</li>
         </NavLink>

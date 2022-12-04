@@ -25,6 +25,9 @@ const Map = () => {
           <Marker position={[36.502626893949284, -6.272904771717729]}>
             <Popup>Clínica HEALTH ALGORITHM Cadiz</Popup>
           </Marker>
+          <Marker position={[43.009519587392404, -7.557221379411343]}>
+            <Popup>Clínica HEALTH ALGORITHM Lugo</Popup>
+          </Marker>
         </MapContainer>
       </div>
     </>
