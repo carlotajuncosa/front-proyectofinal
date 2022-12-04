@@ -1,7 +1,14 @@
 @import "Schema.scss";
 .map {
   padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+h3{
+  margin-bottom: 15px;
+}
+
 .leaflet-container {
   width: 90%;
   height: 50vh;

@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { checkSession } from "./redux/auth/auth.actions";
 import { useNavigate } from "react-router-dom/dist";
 import SpecsTemplate from "./componentes/SpecsTemplate";
+import Appointments from "./componentes/Appointments";
 
 function App() {
   const dispatch = useDispatch();
@@ -81,6 +82,7 @@ function App() {
                desc="La Ginecología hace referencia a la especialidad médica y quirúrgica que trata las enfermedades del sistema 
                      reproductor femenino (útero, vagina y ovarios).La Obstetricia es la parte de la medicina que se encarga de la gestación, 
                      el parto y el puerperio de la mujer (periodo desde el parto hasta que la mujer regresa a su estado anterior a la gestación)." />} />
+        <Route path="/user/client/{:id}/citas" element={<Appointments />} />
       </Routes>
       <Footer />
     </div>

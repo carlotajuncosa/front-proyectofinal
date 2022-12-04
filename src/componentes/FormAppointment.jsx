@@ -31,34 +31,48 @@ const FormAppointment = () => {
           <label>
             <p>Especialidad:</p>
           </label>
-          <select name="select">
+          <select 
+          name="select" 
+          id="specialty"
+          {...register("specialty", {
+            required: true,
+          })}>
             <option disabled selected value> -- selecciona una opción -- </option>
-            <option>Cardiología</option>
-            <option>Traumatología</option>
-            <option>Neurología</option>
-            <option>Psiquiatría</option>
-            <option>Gastroenterología</option>
-            <option>Ginecología</option>
+            <option id="specialty">Cardiología</option>
+            <option id="specialty">Traumatología</option>
+            <option id="specialty">Dermatología</option>
+            <option id="specialty">Psiquiatría</option>
+            <option id="specialty">Gastroenterología</option>
+            <option id="specialty">Ginecología</option>
           </select>
         </div>
+
         <div className="inputForm">
           <p>Modalidad:</p>
-          <select name="select">
+
+          <select 
+          name="select" 
+          id="modality" 
+          {...register("modality", {
+              required: true,
+            })}>
             <option disabled selected value>
               {" "}
               -- selecciona una opción --{" "}
             </option>
-            <option>Presencial</option>
-            <option>Telefónica</option>
-            <option>Videollamada</option>
+            <option id="modality">Presencial</option>
+            <option id="modality">Telefónica</option>
+            <option id="modality">Videollamada</option>
           </select>
+
         </div>
+
         <label htmlFor="day">
           <p>Dia</p>
         </label>
         <div className="inputForm">
           <input
-            id="day"
+            id="day-fns"
             type="date"
             {...register("day", {
               required: true,
