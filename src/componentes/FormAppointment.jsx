@@ -48,8 +48,9 @@ const FormAppointment = () => {
         </div>
 
         <div className="inputForm">
+          <label>
           <p>Modalidad:</p>
-
+          </label>
           <select 
           name="select" 
           id="modality" 
