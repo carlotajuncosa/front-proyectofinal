@@ -4,9 +4,10 @@
     padding: 50px;
 
     &__search{
+        display: flex;
+        justify-content: center;
         padding: 20px;
-        text-align: center;
-
+        
         input{
             width: 250px;
             font-size: 15px;

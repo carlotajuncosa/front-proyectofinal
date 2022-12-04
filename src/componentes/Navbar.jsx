@@ -35,14 +35,14 @@ const Navbar = () => {
         to="/cuadro-medico"
         className="navbar__links"
       >
-        Cuadro médico
+        Cuadro Médico
       </NavLink>
       <NavLink
         activeclassname={"active"}
         to="/area-diagnostica"
         className="navbar__links"
       >
-        Área diagnostica
+        Área Diagnostica
       </NavLink>
       <NavLink
         activeclassname={"active"}
