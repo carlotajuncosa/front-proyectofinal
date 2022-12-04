@@ -6,8 +6,9 @@ const DoctorsCard = ({doctor}) => {
 
   return (
       <div className="doctors">
-        <div className="doctors__img">
+        <div className="doctors__box--img">
             <img
+                className="doctors__img"
                 referrerPolicy="no-referrer"
                 src={doctor.img}
                 alt={doctor.marca}
