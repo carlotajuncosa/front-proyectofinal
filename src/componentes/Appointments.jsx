@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import AreaCliente from '../pages/AreaCliente';
 import { getAppointments } from '../redux/appointments/appointments.actions';
+import "../styles/Appointments.scss";
 
 const Appointments = () => {
 
@@ -15,7 +16,7 @@ const Appointments = () => {
     }, []);
 
     return (
-    <div>
+    <div className='container'>
       <AreaCliente/>
       <div className='appointments'>
       {isLoading ? (
@@ -23,12 +24,14 @@ const Appointments = () => {
       ) : !error ? (
         appointments.map((appointment) => {
           return (
-              <div className="appointments_cards" key={appointment.id}>
-                  <h3>Citas</h3>
-                  <p>{appointment.specialty}</p>
-                  <p>{appointment.modality}</p>
-                  <p>{appointment.day}</p>
-                  <p>{appointment.hour}</p>
+              <div className="appointments__cards" key={appointment.id}>
+                  <h3>Cita</h3>
+                  <div className='appointments__cards--info'>
+                    <p>Especialidad: <span>{appointment.specialty}</span></p>
+                    <p>Modalidad: <span>{appointment.modality}</span></p>
+                    <p>Dia: <span>{appointment.day}</span></p>
+                    <p>Hora: <span>{appointment.hour}</span></p>
+                  </div>
               </div>
           );
         })
