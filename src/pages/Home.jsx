@@ -25,27 +25,39 @@ const Home = () => {
       <div className="home__specs">
         <div className="home__specs--wrapper">
           <div className="home__specs--img">
-            <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia"></img>
+            <NavLink to="/cardiologia">
+              <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia"></img>
+            </NavLink>
             <p className="home__specs--info">Cardiología</p>
           </div>
           <div className="home__specs--img">
+          <NavLink to="/dermatologia">
             <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia"></img>
+          </NavLink>
             <p className="home__specs--info">dermatologia</p>
           </div>
           <div className="home__specs--img">
+          <NavLink to="/gastroenterologia">
             <img src="../../assets/iconsSpecialities/gastro.svg" alt="gastro"></img>
+          </NavLink>
             <p className="home__specs--info">gastroenterologia</p>
           </div>
           <div className="home__specs--img">
+          <NavLink to="/ginecologia">
             <img src="../../assets/iconsSpecialities/ginecologia.svg" alt="ginecologia"></img>
+          </NavLink>
             <p className="home__specs--info">ginecologia</p>
           </div>
           <div className="home__specs--img">
+          <NavLink to="/psiquiatria">
             <img src="../../assets/iconsSpecialities/psiquiatria.svg" alt="psiquiatria"></img>
+          </NavLink>
             <p className="home__specs--info">psiquiatria</p>
           </div>
           <div className="home__specs--img">
+          <NavLink to="/traumatologia">
             <img src="../../assets/iconsSpecialities/traumatologia.svg" alt="traumatologia"></img>
+          </NavLink>
             <p className="home__specs--info">traumatologia</p>
           </div>
         </div>

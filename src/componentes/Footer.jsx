@@ -29,22 +29,22 @@ const Footer = () => {
       </ul>
       <ul className="footer__ul">
         <h3>Especialidades</h3>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/cardiologia" className="footer__links">
           <li className="footer__li">Cardiología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/traumatologia" className="footer__links">
           <li className="footer__li">Traumatología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
-          <li className="footer__li">Neurología</li>
+        <NavLink to="/dermatologia" className="footer__links">
+          <li className="footer__li">Dermatología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/psiquiatria" className="footer__links">
           <li className="footer__li">Psiquiatría</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/gastroenterologia" className="footer__links">
           <li className="footer__li">Gastroenterología</li>
         </NavLink>
-        <NavLink to="/" className="footer__links">
+        <NavLink to="/ginecologia" className="footer__links">
           <li className="footer__li">Ginecología/Obstetricia</li>
         </NavLink>
       </ul>
