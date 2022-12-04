@@ -43,3 +43,31 @@
   }
 }
 
+@include desktop {
+  .doctors {
+    /* display: grid;
+     width: 50%;
+     grid-template-columns: repeat(2, 1fr);
+     padding: 30px;
+     gap: 10px; */
+    display: flex;
+    border-radius: 16px;
+    margin: 20px 0;
+    border: 3px solid $base-color;
+    width: 600px;
+    height: 300px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+
+    &__info {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  }
+}
