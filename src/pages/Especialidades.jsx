@@ -20,9 +20,7 @@ const Especialidades = () => {
               La patología cardiovascular constituye la primera causa de
               mortalidad en los países occidentales a pesar de los avances que
               se han producido, en los últimos años, en el conocimiento y
-              control de los factores de riesgo cardiovascular. Por este motivo,
-              es fundamental un diagnóstico precoz y preciso para poder realizar
-              un tratamiento adecuado.
+              control de los factores de riesgo cardiovascular. 
             </p>
           </div>
           <div className="especialidades__box--img">
@@ -53,10 +51,7 @@ const Especialidades = () => {
               desórdenes del aparato locomotor, es decir, de sus partes
               musculares, óseas o articulares, lesiones agudas, crónicas,
               traumáticas… Tiene el campo de actuación en corregir problemas
-              musculares, esqueléticos y articulares. La traumatología se ocupa
-              de lesiones traumáticas de columna y extremidades que afectan a
-              los huesos, ligamentos y articulaciones, músculos y tendones y
-              heridas en la piel.
+              musculares, esqueléticos y articulares. 
             </p>
           </div>
         </div>
