@@ -24,7 +24,7 @@ const AreaDiagnostica = () => {
             </p>
           </div>
         </div>
-        <div className="diag__box">
+        <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
             <h3 className="diag__box--title">Hemodinámica</h3>
             <h3 className="diag__box--title">& Cardiología</h3>
@@ -64,7 +64,7 @@ const AreaDiagnostica = () => {
             </p>
           </div>
         </div>
-        <div className="diag__box">
+        <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
             <h3 className="diag__box--title">Análisis Clínicos</h3>
             <p className="diag__box--p">
@@ -102,7 +102,7 @@ const AreaDiagnostica = () => {
             </p>
           </div>
         </div>
-        <div className="diag__box">
+        <div className="diag__box diag__box--reverse">
           <div className="diag__box--text">
             <h3 className="diag__box--title">Endoscopia</h3>
             <p className="diag__box--p">

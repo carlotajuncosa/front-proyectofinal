@@ -32,7 +32,7 @@ const Especialidades = () => {
           </div>
         </div>
 
-        <div className="especialidades__box">
+        <div className="especialidades__box especialidades__box--reverse">
           <div className="especialidades__box--img">
             <img
               className="especialidades__img"
@@ -81,7 +81,7 @@ const Especialidades = () => {
           </div>
         </div>
 
-        <div className="especialidades__box">
+        <div className="especialidades__box especialidades__box--reverse">
           <div className="especialidades__box--img">
             <img
               className="especialidades__img"
@@ -117,7 +117,7 @@ const Especialidades = () => {
           </div>
         </div>
 
-        <div className="especialidades__box">
+        <div className="especialidades__box especialidades__box--reverse">
           <div className="especialidades__box--img">
             <img
               className="especialidades__img"

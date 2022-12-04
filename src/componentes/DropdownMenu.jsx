@@ -66,7 +66,7 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
           to="/cuadro-medico"
           className="dropdownMenu__links"
         >
-          Cuadro médico
+          Cuadro Médico
         </NavLink>
         <NavLink
           onClick={toggleMenu}
@@ -74,7 +74,7 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
           to="/area-diagnostica"
           className="dropdownMenu__links"
         >
-          Área diagnostica
+          Área Diagnostica
         </NavLink>
         <NavLink
           onClick={toggleMenu}
@@ -107,7 +107,7 @@ const DropdownMenu = ({ toggleMenu, menu}) => {
         </li>
         <p className="dropdownMenu__links">Lunes a viernes</p>
         <p className="dropdownMenu__links">09:00 a 21:00</p>
-        <p className="dropdownMenu__links">Sabados, domingos y festivos</p>
+        <p className="dropdownMenu__links">Sábados, domingos y festivos</p>
         <p className="dropdownMenu__links">09:00 a 15:00</p>
         <li className="dropdownMenu__links">
           <img
