@@ -49,7 +49,7 @@ const Footer = () => {
         </NavLink>
       </ul>
       <ul className="footer__ul">
-        <h3>Area Diagnóstica</h3>
+        <h3>Área Diagnóstica</h3>
         <NavLink to="/chequeo" className="footer__links">
           <li className="footer__li">Chequeo General</li>
         </NavLink>
@@ -70,7 +70,7 @@ const Footer = () => {
         </NavLink>
       </ul>
       <ul className="footer__ul">
-        <h3>Area Cliente</h3>
+        <h3>Área Cliente</h3>
         <NavLink to="/" className="footer__links">
           <li className="footer__li">Comunicación Directa</li>
         </NavLink>

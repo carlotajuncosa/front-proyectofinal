@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   
-  
   return (
     <div className="header">
       <NavLink activeclassname={"active"} to="/" className="navbar__links">
@@ -15,7 +14,6 @@ const Header = () => {
           alt="logo"
         />
       </NavLink>
-
       <Navbar />
     </div>
   );
