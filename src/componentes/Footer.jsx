@@ -123,6 +123,22 @@ const Footer = () => {
           </li>
         </li>
       </ul>
+      <div className="subFooter">
+        <ul className="subFooter__ul">
+        <NavLink to="/privacidad">
+          <li>Política de privacidad</li>
+        </NavLink>
+        <NavLink to="/legal">
+          <li>Aviso Legal</li>
+        </NavLink>
+        <NavLink to="/cookies" >
+          <li>Política de Cookies</li>
+        </NavLink>
+        <NavLink to="/creators" className="right">
+          <li>Creators</li>
+        </NavLink>
+      </ul>
+      </div>
     </div>
   );
 };
