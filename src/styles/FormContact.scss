@@ -5,6 +5,7 @@
   margin: 20px auto;
   width: 50vw;
   min-width: 300px;
+  max-width: 505px;
   height: 500px;
   text-align: center;
   display: flex;
@@ -27,6 +28,7 @@
     align-items: center;
     width: calc(50vw - 5px);
     min-width: 295px;
+    max-width: 500px;
     height: 495px;
     background-color: $background-color;
     z-index: 2;
@@ -83,6 +85,7 @@
   left: -50%;
   width: 50vw;
   min-width: 300px;
+  max-width: 500px;
   height: 500px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
@@ -102,6 +105,7 @@
   left: -50%;
   width: 50vw;
   min-width: 300px;
+  max-width: 500px;
   height: 500px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
