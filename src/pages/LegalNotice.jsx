@@ -8,7 +8,7 @@ const LegalNotice = () => {
         <div className='legalnotice__box'>
             <p>En cumplimiento de lo dispuesto en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de 
                 la Información y de Comercio Electrónico, se informa que la entidad prestadora de Servicios es la mercantil IDCQ 
-                Hospitales y Sanidad, sociedad con nacionalidad española, C/ Zurbarán 28, 28010 Madrid, CIF D-61491720, 
+                Hospitales y Sanidad, sociedad con nacionalidad española, CIF D-61491720, 
                 Registro mercantil de Madrid, constando en el Tomo 34.117, Folio 103, Sección 8, Hoja M-609942, inscripción 5ª; 
                 entidad autorizada para la prestación de Servicio sanitarios a través de la dirección www.healthalgorithm.es</p>
 

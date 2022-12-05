@@ -21,6 +21,7 @@ import Appointments from "./componentes/Appointments";
 import Chatbot from "./componentes/Chatbot";
 import Cookies from "./componentes/Cookies";
 import Authors from "./pages/Authors";
+import LegalNotice from "./pages/LegalNotice";
 
 function App() {
   const dispatch = useDispatch();
@@ -140,6 +141,7 @@ function App() {
                médico con un endoscopio (un tubo flexible con una cámara) para
                ver el revestimiento de la parte superior del aparato digestivo." />} />
         <Route path="/creators" element={<Authors/>}/>
+        <Route path="/legal" element={<LegalNotice/>} />
       </Routes>
       <Chatbot />
       <Footer />
