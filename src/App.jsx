@@ -89,7 +89,7 @@ function App() {
                desc="La Ginecología hace referencia a la especialidad médica y quirúrgica que trata las enfermedades del sistema 
                      reproductor femenino (útero, vagina y ovarios).La Obstetricia es la parte de la medicina que se encarga de la gestación, 
                      el parto y el puerperio de la mujer (periodo desde el parto hasta que la mujer regresa a su estado anterior a la gestación)." />} />
-        <Route path="/user/client/{:id}/citas" element={<Appointments />} />
+        <Route path="/user/client/citas" element={<Appointments />} />
         <Route path="/chequeo" element={<SpecsTemplate 
               hide="true"
                title="Chequeo General" 

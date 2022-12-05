@@ -18,15 +18,15 @@ const AreaCliente = () => {
         <>
           <div className="client">
             <nav className="client__nav">
-              <NavLink activeclassname={"active"} to="/user/client/{:id}/consulta-online" className="client__links">
+              <NavLink activeclassname={"active"} to="/user/client/consulta-online" className="client__links">
                 Consulta online
               </NavLink>
 
-              <NavLink activeclassname={"active"} to="/user/client/{:id}/citas" className="client__links" >
+              <NavLink activeclassname={"active"} to="/user/client/citas" className="client__links" >
                 Citas
               </NavLink>
 
-              <NavLink activeclassname={"active"} to="/user/client/{:id}/informes" className="client__links" >
+              <NavLink activeclassname={"active"} to="/user/client/informes" className="client__links" >
                 Informes y resultados
               </NavLink>
               <ButtonLogout />
