@@ -22,6 +22,8 @@ import Chatbot from "./componentes/Chatbot";
 import Cookies from "./componentes/Cookies";
 import Authors from "./pages/Authors";
 import LegalNotice from "./pages/LegalNotice";
+import CookiesPolicy from "./pages/CookiesPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   const dispatch = useDispatch();
@@ -142,6 +144,8 @@ function App() {
                ver el revestimiento de la parte superior del aparato digestivo." />} />
         <Route path="/creators" element={<Authors/>}/>
         <Route path="/legal" element={<LegalNotice/>} />
+        <Route path="/cookies" element={<CookiesPolicy/>} />
+        <Route path="/privacidad" element={<PrivacyPolicy/>} />
       </Routes>
       <Chatbot />
       <Footer />
