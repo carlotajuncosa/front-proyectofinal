@@ -37,7 +37,6 @@ export const getPatients = () => async (dispatch) => {
     dispatch({ type: "new_patients_start" });
     try {
       const result = await API.post("patients/create", formdata);
-      console.log(result);
       dispatch({ type: "new_patients_ok" });
       navigate("/area-cliente");
     } catch (error) {

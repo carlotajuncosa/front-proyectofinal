@@ -47,6 +47,9 @@ const Appointments = () => {
                     Hora: <span>{appointment.hour}</span>
                   </p>
                 </div>
+                <div>
+                  <button className="primary_button">Cancelar Cita</button>
+                </div>
               </div>
             );
           })
