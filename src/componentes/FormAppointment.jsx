@@ -19,15 +19,15 @@ const FormAppointment = () => {
   const dispatch = useDispatch();
 
   const newAppointments = (data) => {
+    document.getElementById('appointment').reset();
     dispatch(newAppointment(data, navigate));
   };
-
-  console.log(user)
 
   return (
     <div className="formAppointment__box">
       <div className="formAppointment">
       <form
+      id="appointment"
         className="formAppointment__form"
         onSubmit={handleSubmit(newAppointments)}
       >
@@ -99,7 +99,7 @@ const FormAppointment = () => {
           />
         </div>
         <label htmlFor="file" className="primary_button">
-          <p className="fakeButton">Adjunte un documento si es necesario</p>
+          <p className="fakeButton">Adjuntar un documento</p>
         </label>
         <div>
           <input

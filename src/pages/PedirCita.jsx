@@ -2,8 +2,9 @@ import React from "react";
 import FormLogin from "../componentes/FormLogin";
 import FormAppointment from "../componentes/FormAppointment";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import "../styles/PedirCita.scss";
-const PedirCita = () => {
+const PedirCita = ({ hide }) => {
   const {user, token} = useSelector((state) => state.auth)
   return (
     <> 
@@ -29,8 +30,13 @@ const PedirCita = () => {
       )}
       {user && (
         <>
-        <h2 className="title">Solicita tu cita online</h2>
+        {!hide && (<h2 className="title">Solicita tu cita online</h2>)}
         <FormAppointment />
+        <div className="pedir_cita">
+        {!hide && <NavLink activeclassname={"active"} to="/area-cliente" className="links">
+          <button className="primary_button">Área Cliente</button>
+        </NavLink>}
+        </div>
         </>
       )}
     </>

@@ -1,38 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FormLogin from "../componentes/FormLogin";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import ButtonLogout from "../componentes/ButtonLogout";
 import { useSelector } from "react-redux";
 import "../styles/AreaCliente.scss";
 import Appointments from "../componentes/Appointments";
+import NavbarCliente from "../componentes/NavbarCliente";
+import DatosPersonales from "../componentes/DatosPersonales";
+import PedirCita from "./PedirCita";
 
 const AreaCliente = () => {
-  const { user, token } = useSelector((state) => state.auth);
-  const [Options, changeOption] = useState("Consulta");
+  const { user } = useSelector((state) => state.auth);
+  const [option, changeOption] = useState("Citas");
+
   return (
     <>
-    <h2 className="title">Área Cliente</h2>
+      <h2 className="title">Área Cliente</h2>
       {!user && <FormLogin type="login" />}
       {user && (
-        <>
-          <div className="client">
-            <nav className="client__nav">
-              <NavLink activeclassname={"active"} to="/user/client/consulta-online" className="client__links">
-                Consulta online
-              </NavLink>
+        <div>
+          <NavbarCliente changeOption={changeOption}/>
+          {option === "Citas" && <Appointments />}
+          {option === "DatosPersonales" && <DatosPersonales />}
+          {option === "PedirCita" && <PedirCita hide={"true"}/>}
 
-              <NavLink activeclassname={"active"} to="/user/client/citas" className="client__links" >
-                Citas
-              </NavLink>
-
-              <NavLink activeclassname={"active"} to="/user/client/informes" className="client__links" >
-                Informes y resultados
-              </NavLink>
-              <ButtonLogout />
-            </nav>
-          </div>
-        </>
+        </div>
       )}
     </>
   );
