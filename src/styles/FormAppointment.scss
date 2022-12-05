@@ -79,6 +79,11 @@
     .fakeButton{
     font-size: 0.9em;
     padding: 0.4em 0.8em;
+    color: black;
+    }
+
+    .fakeButton:hover{
+      color: white;
     }
   }
 }
