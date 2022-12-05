@@ -1,4 +1,5 @@
 import { API } from "../shared/services/api";
+import { API2 } from "../shared/services/api";
 
 export const getPatients = () => async (dispatch) => {
     dispatch({ type: "gettingPatients" });
@@ -36,9 +37,9 @@ export const getPatients = () => async (dispatch) => {
   export const newPatient = (formdata, navigate) => async (dispatch) => {
     dispatch({ type: "new_patients_start" });
     try {
-      const result = await API.post("patients/create", formdata);
+      const result = await API2.post("patients/create", formdata);
       dispatch({ type: "new_patients_ok" });
-      navigate("/area-cliente");
+      // navigate("/area-cliente");
     } catch (error) {
       dispatch({ type: "new_patients_error" });
     }

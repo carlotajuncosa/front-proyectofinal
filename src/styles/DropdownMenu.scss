@@ -13,12 +13,13 @@
   z-index: 999;
   transition: all 1.5s;
   box-shadow: 0px 15px 10px -15px #111;
+  font-size: 2vh;
 
   &__logo {
     padding: 15px 0;
   }
   &__img {
-    height: 80px;
+    height: 5em;
   }
   &__nav {
     display: flex;
