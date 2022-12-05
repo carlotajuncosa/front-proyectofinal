@@ -152,17 +152,18 @@
       font-size: 3vw;
       color: black;
       text-transform: uppercase;
-      background-color: white;
+      background-color: $background-color;
+      padding: 10px;
 
       @include mobile {
-        top: 72%;
+        top: 65%;
         font-size: 2vw;
       }
 
       @include tablet {
         font-size: 2.4vw;
         text-align: center;
-        top: 76%;
+        top: 72%;
         left: 0;
         right: 0;
         text-transform: capitalize;
