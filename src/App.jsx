@@ -20,6 +20,7 @@ import SpecsTemplate from "./componentes/SpecsTemplate";
 import Appointments from "./componentes/Appointments";
 import Chatbot from "./componentes/Chatbot";
 import Cookies from "./componentes/Cookies";
+import Authors from "./pages/Authors";
 
 function App() {
   const dispatch = useDispatch();
@@ -138,6 +139,7 @@ function App() {
                desc="La endoscopia gastrointestinal es un procedimiento que hace el
                médico con un endoscopio (un tubo flexible con una cámara) para
                ver el revestimiento de la parte superior del aparato digestivo." />} />
+        <Route path="/creators" element={<Authors/>}/>
       </Routes>
       <Chatbot />
       <Footer />

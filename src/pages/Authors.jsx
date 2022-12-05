@@ -1,22 +1,25 @@
 import React from "react";
+import "../styles/Authors.scss";
 
 const Authors = () => {
   return (
     <div className="authors">
-      <h2 className="authors__title title">Authors</h2>
+      <h2 className="authors__title title">Creators</h2>
       <p className="authors__p p">
         Health Algorithm is a project made by Neftalí de la Cruz, Javi Azagra,
         Adolfo Tardón and Carlota Juncosa with React JS.
       </p>
       {/* CONTAINER TARGETAS ROW */}
-      <div className="authors_container">
+      <div className="authors__container">
         {/* TARGETA  */}
-        <div className="authors_card">
+        <div className="authors__card">
+        <div className="authors__container--img">
           <img
-            className="diag__img"
+            className="authors__img"
             src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mh-7-8-beards-3-1594226995.jpg?crop=0.413xw:0.827xh;0.0481xw,0.0160xh&resize=640:*"
-            alt="chequeo"
+            alt="authorimage"
           ></img>
+          </div>
           <div className="authors__info">
             <h4>Neftalí De La Cruz </h4>
             <p className="authors__p">
@@ -28,12 +31,15 @@ const Authors = () => {
           </div>
         </div>
         {/* TARGETA  */}
-        <div className="authors_card">
+        <div className="authors__card">
+        <div className="authors__container--img">
+
           <img
-            className="diag__img"
+            className="authors__img"
             src="https://media-exp1.licdn.com/dms/image/D4D03AQG_pMBSmplaGQ/profile-displayphoto-shrink_400_400/0/1667228751218?e=1675900800&v=beta&t=zcHk_6GpVRCQZ1CPQTp4PDFnv2hz116XxeAEiBYR4Ho"
-            alt="chequeo"
+            alt="authorimage"
           ></img>
+          </div>
           <div className="authors__info">
             <h4>Javier Azagra</h4>
             <p className="authors__p">
@@ -45,12 +51,15 @@ const Authors = () => {
           </div>
         </div>
         {/* TARGETA  */}
-        <div className="authors_card">
+        <div className="authors__card">
+        <div className="authors__container--img">
+
           <img
-            className="diag__img"
+            className="authors__img"
             src="https://media-exp1.licdn.com/dms/image/C4E03AQHPbgfQF3ESoA/profile-displayphoto-shrink_400_400/0/1656870151689?e=1675900800&v=beta&t=HMERX4zGo-iF7GLaR_3X2s4Q77YZ6CfrXychR0x4sNc"
-            alt="chequeo"
+            alt="authorimage"
           ></img>
+          </div>
           <div className="authors__info">
             <h4>Adolfo Gómez</h4>
             <p className="authors__p">
@@ -62,12 +71,15 @@ const Authors = () => {
           </div>
         </div>
         {/* TARGETA  */}
-        <div className="authors_card">
+        <div className="authors__card">
+        <div className="authors__container--img">
+
           <img
-            className="diag__img"
+            className="authors__img"
             src="https://media-exp1.licdn.com/dms/image/D4D03AQFphj7M1GmBug/profile-displayphoto-shrink_400_400/0/1667234346809?e=1675900800&v=beta&t=e4ULNJ0d_pNBSRQq4-ICtt8ArBfi9FVS59h9SvMEEM0"
-            alt="chequeo"
+            alt="authorImage"
           ></img>
+          </div>
           <div className="authors__info">
             <h4>Carlota Juncosa</h4>
             <p className="authors__p">
