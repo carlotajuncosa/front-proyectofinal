@@ -105,32 +105,50 @@
 
   .subFooter{
     width: 100%;
-    
-     &__ul{
-      border-top: $border;
-      text-align: center;
-      
-      li{
-        margin: 5px 0;
-      }
+    display: flex;
+    flex-direction: column;
+    border-top: $border;
+    padding: 5px 0;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+
+    @include tablet{
+      justify-content: space-between;
+      flex-direction: row;
+      font-size: 1em;
+    }
+
+     &__ul1{
+      gap: 20px;
 
       @include tablet {
+        width: 50%;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 6rem;
+        justify-content: space-between;
         margin: 0;
+      }
+
+      li{
+        padding-bottom: 10px;
+        @include tablet{
+          padding: 0;
+        }
       }
 
         li:hover{
           text-decoration: underline $base-color;
         }
-
-        .right{
-        margin-left: 12rem;
+      }
+      
+      &__ul2{
+        width: 40%;
+        text-align: center;
+        
+        li:hover{
+          text-decoration: underline $base-color;
         }
-     }
-
+      }
      
 
   }

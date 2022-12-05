@@ -124,7 +124,7 @@ const Footer = () => {
         </li>
       </ul>
       <div className="subFooter">
-        <ul className="subFooter__ul">
+        <ul className="subFooter__ul1">
         <NavLink to="/privacidad">
           <li>Política de privacidad</li>
         </NavLink>
@@ -134,10 +134,12 @@ const Footer = () => {
         <NavLink to="/cookies" >
           <li>Política de Cookies</li>
         </NavLink>
-        <NavLink to="/creators" className="right">
+        </ul>
+        <ul className="subFooter__ul2">
+        <NavLink to="/creators">
           <li>Creators</li>
         </NavLink>
-      </ul>
+        </ul>
       </div>
     </div>
   );
