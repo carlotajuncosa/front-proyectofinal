@@ -16,49 +16,70 @@ const Home = () => {
         <video className="home__video--src" loop autoPlay muted>
           <source src="/assets/video_loalamos.mp4" type="video/mp4" />
         </video>
-        <img className="home__video--img" src="/assets/videoImg.jpg" alt="grupo medicos" />
-        <NavLink
-        to="/pedir-cita">
-        <button className="home--button primary_button">Pide cita</button>
-      </NavLink>
+        <img
+          className="home__video--img"
+          src="/assets/videoImg.jpg"
+          alt="grupo medicos"
+        />
+        <NavLink to="/pedir-cita">
+          <button className="home--button primary_button">Pide cita</button>
+        </NavLink>
       </div>
       <h3>Especialidades</h3>
       <div className="home__specs">
         <div className="home__specs--wrapper">
           <div className="home__specs--img">
             <NavLink to="/cardiologia">
-              <img src="../../assets/iconsSpecialities/cardiologia.svg" alt="cardiologia"></img>
+              <img
+                src="../../assets/iconsSpecialities/cardiologia.svg"
+                alt="cardiologia"
+              ></img>
             </NavLink>
             <p className="home__specs--info">Cardiología</p>
           </div>
           <div className="home__specs--img">
-          <NavLink to="/dermatologia">
-            <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia"></img>
-          </NavLink>
+            <NavLink to="/dermatologia">
+              <img
+                src="../../assets/iconsSpecialities/dermatologia.svg"
+                alt="dermatologia"
+              ></img>
+            </NavLink>
             <p className="home__specs--info">dermatología</p>
           </div>
           <div className="home__specs--img">
-          <NavLink to="/gastroenterologia">
-            <img src="../../assets/iconsSpecialities/gastro.svg" alt="gastro"></img>
-          </NavLink>
+            <NavLink to="/gastroenterologia">
+              <img
+                src="../../assets/iconsSpecialities/gastro.svg"
+                alt="gastro"
+              ></img>
+            </NavLink>
             <p className="home__specs--info">gastroenterología</p>
           </div>
           <div className="home__specs--img">
-          <NavLink to="/ginecologia">
-            <img src="../../assets/iconsSpecialities/ginecologia.svg" alt="ginecologia"></img>
-          </NavLink>
+            <NavLink to="/ginecologia">
+              <img
+                src="../../assets/iconsSpecialities/ginecologia.svg"
+                alt="ginecologia"
+              ></img>
+            </NavLink>
             <p className="home__specs--info">ginecología</p>
           </div>
           <div className="home__specs--img">
-          <NavLink to="/psiquiatria">
-            <img src="../../assets/iconsSpecialities/psiquiatria.svg" alt="psiquiatria"></img>
-          </NavLink>
+            <NavLink to="/psiquiatria">
+              <img
+                src="../../assets/iconsSpecialities/psiquiatria.svg"
+                alt="psiquiatria"
+              ></img>
+            </NavLink>
             <p className="home__specs--info">psiquiatría</p>
           </div>
           <div className="home__specs--img">
-          <NavLink to="/traumatologia">
-            <img src="../../assets/iconsSpecialities/traumatologia.svg" alt="traumatologia"></img>
-          </NavLink>
+            <NavLink to="/traumatologia">
+              <img
+                src="../../assets/iconsSpecialities/traumatologia.svg"
+                alt="traumatologia"
+              ></img>
+            </NavLink>
             <p className="home__specs--info">traumatología</p>
           </div>
         </div>
@@ -70,14 +91,15 @@ const Home = () => {
           alt="videoconsulta"
           className="home__remote--img"
         ></img>
-        <div>
-        <h2 className="home__remote--h2"><div className="home__videomessage">¿No puedes acudir al centro?<div>Tenemos vídeo consulta</div></div></h2>
-        <NavLink
-        to="/pedir-cita">
-        <button className="home--button primary_button">Pide cita</button>
-      </NavLink>
-      </div>
-      </div>
+          <h2 className="home__remote--h2">
+            <div className="home__videomessage">
+              ¿No puedes acudir al centro? <div>Tenemos vídeo consulta</div>
+            </div>
+          </h2>
+          <NavLink to="/pedir-cita">
+            <button className="home--button primary_button">Pide cita</button>
+          </NavLink>
+        </div>
       <Map />
     </div>
   );
