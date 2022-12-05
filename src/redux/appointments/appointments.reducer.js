@@ -9,7 +9,7 @@ const appointmentsReducer = (state = INITIAL_STATE, action) => {
 
     // GET APPOINTMENTS
     case "gettingAppointments":
-      return { ...state, isLoading: true };
+      return { ...INITIAL_STATE, isLoading: true };
     case "getAppointments":
       return {
         ...state,

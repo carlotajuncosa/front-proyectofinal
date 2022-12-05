@@ -2,10 +2,13 @@ import React from "react";
 import "../styles/FormAppointment.scss";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { newAppointment } from "../redux/appointments/appointments.actions";
 
 const FormAppointment = () => {
+  
+  const { user } = useSelector((state) => state.auth);
+
   const {
     register,
     handleSubmit,
@@ -18,6 +21,8 @@ const FormAppointment = () => {
   const newAppointments = (data) => {
     dispatch(newAppointment(data, navigate));
   };
+
+  console.log(user)
 
   return (
     <div className="formAppointment__box">
