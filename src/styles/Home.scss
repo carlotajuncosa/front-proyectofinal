@@ -4,6 +4,13 @@
   width: 90%;
   font-size: $generalFont;
 
+  &__videomessage{
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   &--button {
     position: absolute;
     left: 37%;
@@ -142,10 +149,11 @@
       height: 70%;
       object-fit: cover;
     }
+    
 
     &--h2 {
       position: absolute;
-      top: 55%;
+      top: 45%;
       text-align: center;
       left: 0;
       right: 0;
