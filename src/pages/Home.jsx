@@ -35,31 +35,31 @@ const Home = () => {
           <NavLink to="/dermatologia">
             <img src="../../assets/iconsSpecialities/dermatologia.svg" alt="dermatologia"></img>
           </NavLink>
-            <p className="home__specs--info">dermatologia</p>
+            <p className="home__specs--info">dermatología</p>
           </div>
           <div className="home__specs--img">
           <NavLink to="/gastroenterologia">
             <img src="../../assets/iconsSpecialities/gastro.svg" alt="gastro"></img>
           </NavLink>
-            <p className="home__specs--info">gastroenterologia</p>
+            <p className="home__specs--info">gastroenterología</p>
           </div>
           <div className="home__specs--img">
           <NavLink to="/ginecologia">
             <img src="../../assets/iconsSpecialities/ginecologia.svg" alt="ginecologia"></img>
           </NavLink>
-            <p className="home__specs--info">ginecologia</p>
+            <p className="home__specs--info">ginecología</p>
           </div>
           <div className="home__specs--img">
           <NavLink to="/psiquiatria">
             <img src="../../assets/iconsSpecialities/psiquiatria.svg" alt="psiquiatria"></img>
           </NavLink>
-            <p className="home__specs--info">psiquiatria</p>
+            <p className="home__specs--info">psiquiatría</p>
           </div>
           <div className="home__specs--img">
           <NavLink to="/traumatologia">
             <img src="../../assets/iconsSpecialities/traumatologia.svg" alt="traumatologia"></img>
           </NavLink>
-            <p className="home__specs--info">traumatologia</p>
+            <p className="home__specs--info">traumatología</p>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ const Home = () => {
           alt="videoconsulta"
           className="home__remote--img"
         ></img>
-        <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos video consulta</h2>
+        <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos vídeo consulta</h2>
         <NavLink
         to="/pedir-cita">
         <button className="home--button primary_button">Pide cita</button>

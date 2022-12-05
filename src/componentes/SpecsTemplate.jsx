@@ -41,11 +41,12 @@ const SpecsTemplate = ({ title, img, desc, hide }) => {
       <button className="primary_button" onClick={() => navigate(-1)}>
         Volver
       </button>
+      <div className="doctorCont">
       {!hide && !isLoading && doctorsInfo &&
         doctorsInfo.map((doctor) => {
           return <DoctorsCard key={doctor._id} doctor={doctor} />;
         })}
-
+    </div>
       <FormContact />
     </div>
   );
