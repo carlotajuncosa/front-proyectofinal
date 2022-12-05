@@ -1,4 +1,5 @@
 @import "Schema.scss";
+
 .footer {
   width: 100%;
   margin: 0 auto;
@@ -108,13 +109,13 @@
     display: flex;
     flex-direction: column;
     border-top: $border;
-    padding: 5px 0;
+    padding: 10px 0;
     align-items: center;
     text-align: center;
     font-size: 0.8em;
 
     @include tablet{
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: row;
       font-size: 1em;
     }
@@ -125,12 +126,15 @@
       @include tablet {
         width: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 0;
       }
 
       li{
         padding-bottom: 10px;
+        font-size: 0.9em;
+        font-weight: 700;
+        
         @include tablet{
           padding: 0;
         }
@@ -141,15 +145,9 @@
         }
       }
       
-      &__ul2{
-        width: 40%;
-        text-align: center;
-        
-        li:hover{
-          text-decoration: underline $base-color;
-        }
+    
       }
      
 
   }
-}
+

@@ -134,12 +134,12 @@ const Footer = () => {
         <NavLink to="/cookies" >
           <li>Política de Cookies</li>
         </NavLink>
-        </ul>
-        <ul className="subFooter__ul2">
         <NavLink to="/creators">
           <li>Creators</li>
         </NavLink>
         </ul>
+       {/*  <ul className="subFooter__ul2">
+        </ul> */}
       </div>
     </div>
   );
