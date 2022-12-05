@@ -1,12 +1,12 @@
 @import "Schema.scss";
 
 .formAppointment__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1em;
-    margin: 20px auto;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  margin: 20px auto;
+}
 
 .formAppointment {
   font-size: $generalFont;
@@ -67,10 +67,18 @@
       width: 50%;
       min-width: 35vw;
 
+      &[type="file"] {
+        display: none;
+      }
+
       @include tablet {
         width: 100%;
         min-width: unset;
       }
+    }
+    .fakeButton{
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
     }
   }
 }

@@ -93,14 +93,15 @@ const FormAppointment = () => {
             })}
           />
         </div>
-        <label htmlFor="file">
-          <p>Adjunte un documento si es necesario:</p>
+        <label htmlFor="file" className="primary_button">
+          <p className="fakeButton">Adjunte un documento si es necesario</p>
         </label>
-        <div className="inputForm">
+        <div>
           <input
             id="file"
             type="file"
             accept=".pdf, .png, .jpg, .jpeg, .doc, .docx"
+            placeholder="pulsa aqui"
           />
         </div>
         <button className="primary_button" type="submit" disabled={!isValid}>

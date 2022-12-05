@@ -48,7 +48,7 @@ $layout_bp_mobile_s: 400px;
 $layout_bp_mobile: 480px;
 $layout_bp_mobileLandscape: 750px;
 $layout_bp_tablet: 1004px;
-$layout_bp_desktop: 1500px;
+$layout_bp_desktop: 1200px;
 
 @mixin mobile_s {
   @media only screen and (min-width: #{$layout_bp_mobile_s}) {
