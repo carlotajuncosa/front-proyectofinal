@@ -66,7 +66,7 @@ const Home = () => {
 
       <div className="home__remote">
         <img
-          src="https://consumotic.mx/wp-content/uploads/2021/05/0512_doctora-laptop-768x463.jpg"
+          src="../../assets/doctors/videollamada1.png"
           alt="videoconsulta"
           className="home__remote--img"
         ></img>
