@@ -138,8 +138,6 @@ const Footer = () => {
           <li>Creators</li>
         </NavLink>
         </ul>
-       {/*  <ul className="subFooter__ul2">
-        </ul> */}
       </div>
     </div>
   );
