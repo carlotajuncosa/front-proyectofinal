@@ -1,18 +1,1 @@
 @import "Schema.scss";
-
-.client{
-    text-align: center;
-    gap: 20px;
-
-    &__nav{
-        padding: 10px;
-    }
-
-    &__links{
-        padding: 10px;
-    }
-
-    &__links:hover{
-        text-decoration: underline $base-color;;
-    }
-}

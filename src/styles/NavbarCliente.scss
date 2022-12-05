@@ -1,0 +1,29 @@
+@import "Schema.scss";
+
+.client{
+    
+    text-align: center;
+    gap: 20px;
+
+    &__nav{
+        display: flex;
+        padding-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+
+        padding: 10px;
+    }
+
+    &__links{
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__links:hover{
+        text-decoration: underline $base-color;;
+    }
+    &__logout{
+        margin-left: 12px;
+    }
+}

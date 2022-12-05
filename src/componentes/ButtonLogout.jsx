@@ -10,7 +10,7 @@ const ButtonLogout = () => {
         dispatch(logoutUser(navigate))
     }
   return (
-    <button onClick={logOut}>Log Out</button>
+    <button className="primary_button" onClick={logOut}>Log Out</button>
   )
 }
 

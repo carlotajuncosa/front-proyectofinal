@@ -9,10 +9,7 @@ const FormContact = () => {
     formState: {errors, isValid},
   } = useForm();
 
-  const contact = (data) => {
-    //* AQUÏ VA EL DISPATCH
-    //! IMPLEMENTAR CON EL SERVIDOR DE CORREO
-  }
+  const contact = (data) => {}
   return (
     <div className="formContact">
     <form onSubmit={handleSubmit(contact)} className="formContact__form">

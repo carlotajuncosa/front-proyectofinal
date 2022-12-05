@@ -16,7 +16,7 @@ const Authors = () => {
         <div className="authors__container--img">
           <img
             className="authors__img"
-            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mh-7-8-beards-3-1594226995.jpg?crop=0.413xw:0.827xh;0.0481xw,0.0160xh&resize=640:*"
+            src="/assets/creators/neftali.jpeg"
             alt="authorimage"
           ></img>
           </div>
@@ -36,7 +36,7 @@ const Authors = () => {
 
           <img
             className="authors__img"
-            src="https://media-exp1.licdn.com/dms/image/D4D03AQG_pMBSmplaGQ/profile-displayphoto-shrink_400_400/0/1667228751218?e=1675900800&v=beta&t=zcHk_6GpVRCQZ1CPQTp4PDFnv2hz116XxeAEiBYR4Ho"
+            src="/assets/creators/javi.jpg"
             alt="authorimage"
           ></img>
           </div>
@@ -56,7 +56,7 @@ const Authors = () => {
 
           <img
             className="authors__img"
-            src="https://media-exp1.licdn.com/dms/image/C4E03AQHPbgfQF3ESoA/profile-displayphoto-shrink_400_400/0/1656870151689?e=1675900800&v=beta&t=HMERX4zGo-iF7GLaR_3X2s4Q77YZ6CfrXychR0x4sNc"
+            src="/assets/creators/adolf.jpg"
             alt="authorimage"
           ></img>
           </div>
@@ -76,7 +76,7 @@ const Authors = () => {
 
           <img
             className="authors__img"
-            src="https://media-exp1.licdn.com/dms/image/D4D03AQFphj7M1GmBug/profile-displayphoto-shrink_400_400/0/1667234346809?e=1675900800&v=beta&t=e4ULNJ0d_pNBSRQq4-ICtt8ArBfi9FVS59h9SvMEEM0"
+            src="/assets/creators/carlota.jpg"
             alt="authorImage"
           ></img>
           </div>

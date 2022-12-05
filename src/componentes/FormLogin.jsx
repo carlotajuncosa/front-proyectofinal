@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/FormLogin.scss";
+import Loader from "./Loader";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,12 +38,10 @@ const FormLogin = ({ type }) => {
     <div className="formLogin__box">
       <div className="formLogin">
       {isLoading && (
-        <>
         <div className="formLogin__form">
-          <h4>Espere un momento mientras le ubicamos en nuestra base de datos</h4>
-          <p>Gracias por su paciencia</p>
-          </div>
-        </>
+        <Loader />
+        </div>
+          
       )}
       {!isLoading && (
         <>
