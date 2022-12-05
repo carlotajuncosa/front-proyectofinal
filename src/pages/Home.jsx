@@ -70,11 +70,13 @@ const Home = () => {
           alt="videoconsulta"
           className="home__remote--img"
         ></img>
-        <h2 className="home__remote--h2">¿No puedes acudir al centro? Tenemos vídeo consulta</h2>
+        <div>
+        <h2 className="home__remote--h2"><div className="home__videomessage">¿No puedes acudir al centro?<div>Tenemos vídeo consulta</div></div></h2>
         <NavLink
         to="/pedir-cita">
         <button className="home--button primary_button">Pide cita</button>
       </NavLink>
+      </div>
       </div>
       <Map />
     </div>
