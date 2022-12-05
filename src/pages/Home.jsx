@@ -16,6 +16,7 @@ const Home = () => {
         <video className="home__video--src" loop autoPlay muted>
           <source src="/assets/video_loalamos.mp4" type="video/mp4" />
         </video>
+        <img className="home__video--img" src="/assets/videoImg.jpg" alt="grupo medicos" />
         <NavLink
         to="/pedir-cita">
         <button className="home--button primary_button">Pide cita</button>

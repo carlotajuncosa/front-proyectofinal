@@ -51,10 +51,24 @@
     margin-bottom: 30px;
 
     &--src {
+      display: none;
       top: 0;
       left: 0;
       width: 100%;
       height: auto;
+
+      @include tablet {
+        display: unset;
+      }
+    }
+
+    &--img {
+      display: unset;
+      width: 100vw;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
@@ -107,6 +121,7 @@
 
         @include tablet {
           width: 12vw;
+          max-width: 200px;
         }
       }
     }
