@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import AreaCliente from '../pages/AreaCliente';
-import { getAppointments } from '../redux/appointments/appointments.actions';
+import { getAppointments, getPatientAppointments } from '../redux/appointments/appointments.actions';
 import "../styles/Appointments.scss";
 
 const Appointments = () => {
@@ -12,7 +12,8 @@ const Appointments = () => {
     const { appointments, isLoading, error } = useSelector((state) => state.appointments);
 
     useEffect(() => {
-        dispatch(getAppointments());
+        dispatch(getPatientAppointments());
+        console.log(appointments);
     }, []);
 
     return (
