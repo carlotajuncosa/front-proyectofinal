@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/DatosPersonales.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { getPatients, newPatient } from "../redux/patients/patients.actions";
+import { getPatients, newPatient, editPatient} from "../redux/patients/patients.actions";
 import Loader from "./Loader";
 
 const DatosPersonales = () => {
@@ -26,8 +26,6 @@ const DatosPersonales = () => {
 
   useEffect(() => {
     setPatientData(patients[0]);
-    console.log(patientData)
-    console.log(patients[0])
   }, [patients]);
 
   const createNewPatient = (data) => {
@@ -43,15 +41,25 @@ const DatosPersonales = () => {
   };
 
   const changeForm = (ev) => {
-    const {value, name} = ev.target
+    const { value, name } = ev.target;
 
     setNewUserData({ ...newUserData, [name]: value });
-  }
+  };
 
   const submitEditForm = (ev) => {
     ev.preventDefault();
-    console.log('Formulario para enviar con ', newUserData)
-  }
+    const formData = new FormData();
+    formData.append("name", newUserData.name);
+    formData.append("surname", newUserData.surname);
+    formData.append("phone", newUserData.phone);
+    formData.append("genre", newUserData.genre);
+    formData.append("img", newUserData.img);
+    formData.append("nif", newUserData.nif);
+    formData.append("birth_date", newUserData.birth_date);
+    dispatch(editPatient(formData));
+    setEdit(false);
+
+  };
 
   return (
     <div className="personalData__box">
@@ -151,7 +159,7 @@ const DatosPersonales = () => {
                       className="dataPatient__img"
                       src={patient.img}
                       alt={patient.name}
-                    /> 
+                    />
                   </div>
                   <p className="dataPatient__p">
                     Nombre: <span>{patient.name}</span>
@@ -186,22 +194,18 @@ const DatosPersonales = () => {
       {edit && (
         <div>
           <div className="personalData">
-            <form
-              className="personalData__form"
-              onSubmit={submitEditForm}
-            >
-                <label htmlFor="img" className="primary_button">
-              <p className="fakeButton">Foto de perfil</p>
-            </label>
-            <input
-              type="file"
-              name="photo"
-              id="img"
-              accept=".png, .jpg, .jpeg"
-              defaultValue={patientData?.img}
-                  value={newUserData?.img}
-                  onChange={changeForm}
-            />
+            <form className="personalData__form" onSubmit={submitEditForm}>
+              <label htmlFor="img" className="primary_button">
+                <p className="fakeButton">Foto de perfil</p>
+              </label>
+              <input
+                type="file"
+                name="img"
+                id="img"
+                accept=".png, .jpg, .jpeg"
+                value={newUserData?.img}
+                onChange={changeForm}
+              />
 
               <label>
                 Nombre
@@ -223,7 +227,8 @@ const DatosPersonales = () => {
                   id="surname"
                   defaultValue={patientData?.surname}
                   value={newUserData?.surname}
-                  onChange={changeForm}/>
+                  onChange={changeForm}
+                />
               </label>
 
               <label>
@@ -250,9 +255,15 @@ const DatosPersonales = () => {
                   <option disabled selected>
                     selecciona una opción
                   </option>
-                  <option id="genre" value="female">female</option>
-                  <option id="genre" value="male">male</option>
-                  <option id="genre" value="undefined">undefined</option>
+                  <option id="genre" value="female">
+                    female
+                  </option>
+                  <option id="genre" value="male">
+                    male
+                  </option>
+                  <option id="genre" value="undefined">
+                    undefined
+                  </option>
                 </select>
               </label>
 
@@ -279,7 +290,6 @@ const DatosPersonales = () => {
                   onChange={changeForm}
                 />
               </label>
-
               <button className="primary_button" type="submit">
                 Enviar
               </button>
