@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import AreaCliente from "../pages/AreaCliente";
 import Loader from "./Loader";
 import {
+  deleteAppointment,
   getAppointments,
   getPatientAppointments,
 } from "../redux/appointments/appointments.actions";
@@ -16,6 +17,10 @@ const Appointments = () => {
     (state) => state.appointments
   );
 
+  const deleteOne = (id) => {
+    dispatch(deleteAppointment(id));
+  }
+
   useEffect(() => {
     dispatch(getPatientAppointments());
   }, []);
@@ -23,11 +28,11 @@ const Appointments = () => {
   return (
     <div className="container">
       <div className="appointments">
-        {isLoading ? (
-          <Loader />
-        ) : (
-          !error &&
+        {isLoading && (<Loader />)}
+        {appointments.length <= 0 && <h4 className="noAppointments">No hay citas</h4>}
+        {!error && appointments &&
           appointments.map((appointment) => {
+            if (appointment !== null){
             return (
               <div className="appointments__cards" key={appointment.id}>
                 {/* boton anular citas 
@@ -48,12 +53,12 @@ const Appointments = () => {
                   </p>
                 </div>
                 <div>
-                  <button className="primary_button">Cancelar Cita</button>
+                  <button onClick={ () => deleteOne(appointment._id)} className="primary_button">Cancelar Cita</button>
                 </div>
               </div>
-            );
+            )}
           })
-        )}
+        }
       </div>
     </div>
   );

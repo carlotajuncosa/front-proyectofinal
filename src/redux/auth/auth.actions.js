@@ -1,12 +1,12 @@
 import { API } from "../shared/services/api";
 
-export const newUser = (formdata, navigate) => async (dispatch) => {
+export const newUser = (formdata, setform) => async (dispatch) => {
   dispatch({ type: "register_user_start" });
   try {
     const result = await API.post("users/create", formdata);
     console.log(result)
     dispatch({ type: "register_user_ok" });
-    navigate("/");
+    setform("login");
   } catch (error) {
     dispatch({ type: "register_user_error" });
   }

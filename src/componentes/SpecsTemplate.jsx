@@ -5,6 +5,7 @@ import { getDoctors } from "../redux/doctors/doctors.actions";
 import "../styles/SpecsTemplate.scss";
 import { useNavigate } from "react-router-dom";
 import DoctorsCard from "./DoctorsCard";
+import Loader from "./Loader";
 
 const SpecsTemplate = ({ title, img, desc, hide }) => {
   const navigate = useNavigate();
@@ -41,6 +42,9 @@ const SpecsTemplate = ({ title, img, desc, hide }) => {
       <button className="primary_button" onClick={() => navigate(-1)}>
         Volver
       </button>
+      {isLoading && (
+        <Loader />       
+      )}
       <div className="doctorCont">
       {!hide && !isLoading && doctorsInfo &&
         doctorsInfo.map((doctor) => {

@@ -43,17 +43,22 @@
     @include tablet {
       width: 375px;
     }
-
+   &__form--register{
+      height: 380px !important;
+    } 
     h2 {
       font-size: 2em;
       padding-top: 1em;
+      padding-bottom: 0.5em;
 
       @include tablet {
         padding: 0.5em 0;
       }
     }
     p {
-      padding: 0;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
+    
 
       @include tablet {
         padding: 0.2em 0;
@@ -73,6 +78,8 @@
     input {
       width: 50%;
       min-width: 35vw;
+      border: 2px solid $base-color;
+      border-radius: 16px;
 
       @include tablet {
         width: 100%;
@@ -133,3 +140,5 @@
     transform: rotate(360deg);
   }
 }
+
+

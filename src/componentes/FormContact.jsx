@@ -13,7 +13,7 @@ const FormContact = () => {
   return (
     <div className="formContact">
     <form onSubmit={handleSubmit(contact)} className="formContact__form">
-      <h2 className="formContact__h2">Hola, ¿cómo podemos ayudarte?</h2>
+      <h2 className="formContact__h2">Hola, ¿cómo <div>podemos ayudarte?</div></h2>
       <h3 className="formContact__h3">Estamos aquí para ayudarte y te responderemos dentro de las siguientes 24 horas.</h3>
       
       {/* NOMBRE */}

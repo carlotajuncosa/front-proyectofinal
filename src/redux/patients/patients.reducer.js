@@ -62,7 +62,6 @@ const INITIAL_STATE = {
           isLoading: false,
           error: action.payload
         };
-  
       default:
         return state;
     }
