@@ -49,11 +49,17 @@ export const getPatients = () => async (dispatch) => {
     }
   };
   
-  export const editPatient = (formdata, navigate) => async (dispatch) => {
+  export const editPatient = (formdata, navigate, id) => async (dispatch) => {
     dispatch({ type: "edit_patients_start" });
     try {
-      const result = await API.put("edit/{_id}", formdata);
-      console.log(result);
+      const result = await API.put("patients/edit/", formdata);
+      console.log(result)
+      try {
+        const result = await API.get("patients/byUser");
+        dispatch({ type: "getPatients", payload: result.data });
+      } catch (error) {
+        dispatch({ type: "errorPatients", payload: error.message });
+      }
       dispatch({ type: "edit_patients_ok" });
     } catch (error) {
       dispatch({ type: "edit_patients_error" });

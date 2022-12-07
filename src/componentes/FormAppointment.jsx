@@ -36,8 +36,8 @@ const FormAppointment = ({ changeOption }) => {
           <label>
             <p>Especialidad:</p>
           </label>
-          <select 
-          name="select" 
+          <select
+          name="select"
           id="specialty"
           {...register("specialty", {
             required: true,
@@ -50,9 +50,8 @@ const FormAppointment = ({ changeOption }) => {
             <option id="specialty">Gastroenterología</option>
             <option id="specialty">Ginecología</option>
           </select>
-        </div>
+        
 
-        <div className="inputForm">
           <label>
           <p>Modalidad:</p>
           </label>
