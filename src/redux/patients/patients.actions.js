@@ -52,7 +52,7 @@ export const getPatients = () => async (dispatch) => {
   export const editPatient = (formdata, navigate, id) => async (dispatch) => {
     dispatch({ type: "edit_patients_start" });
     try {
-      const result = await API.put("patients/edit/", formdata);
+      const result = await API2.put("patients/edit/", formdata);
       console.log(result)
       try {
         const result = await API.get("patients/byUser");
