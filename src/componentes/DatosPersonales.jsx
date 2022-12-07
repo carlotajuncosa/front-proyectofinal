@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/DatosPersonales.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { getPatients, newPatient, editPatient} from "../redux/patients/patients.actions";
+import { getPatients, newPatient, editPatient } from "../redux/patients/patients.actions";
 import Loader from "./Loader";
 
 const DatosPersonales = () => {
@@ -24,7 +24,7 @@ const DatosPersonales = () => {
 
   useEffect(() => {
     reset(patients[0]);
-}, [patients]);
+  }, [patients]);
 
   const createNewPatient = (data) => {
     const formData = new FormData();
@@ -50,7 +50,6 @@ const DatosPersonales = () => {
     formData.append("birth_date", data.birth_date);
     dispatch(editPatient(formData));
     setEdit(false);
-
   };
 
   return (
@@ -58,10 +57,7 @@ const DatosPersonales = () => {
       {isLoading && <Loader />}
       {!isLoading && patients.length <= 0 && (
         <div className="personalData">
-          <form
-            className="personalData__form"
-            onSubmit={handleSubmit(createNewPatient)}
-          >
+          <form className="personalData__form" onSubmit={handleSubmit(createNewPatient)}>
             <h3>Datos personales</h3>
             <label htmlFor="img" className="primary_button">
               <p className="fakeButton">Foto de perfil</p>
@@ -82,22 +78,12 @@ const DatosPersonales = () => {
 
             <label>
               Apellidos
-              <input
-                type="text"
-                name="surname"
-                id="surname"
-                {...register("surname")}
-              />
+              <input type="text" name="surname" id="surname" {...register("surname")} />
             </label>
 
             <label>
               Teléfono:
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                {...register("phone")}
-              />
+              <input type="number" name="phone" id="phone" {...register("phone")} />
             </label>
 
             <label>
@@ -125,12 +111,7 @@ const DatosPersonales = () => {
 
             <label>
               Fecha de nacimiento:
-              <input
-                type="text"
-                name="birth_date"
-                id="birth_date"
-                {...register("birth_date")}
-              />
+              <input type="text" name="birth_date" id="birth_date" {...register("birth_date")} />
             </label>
 
             <button className="primary_button" type="submit">
@@ -139,7 +120,7 @@ const DatosPersonales = () => {
           </form>
         </div>
       )}
-      {patients.length > 0 && (
+      {patients.length > 0 && !edit &&(
         <>
           {patients.map((patient) => {
             return (
@@ -147,11 +128,7 @@ const DatosPersonales = () => {
                 <h3>Datos personales</h3>
                 <div className="dataPatient__card">
                   <div className="dataPatient__container--img">
-                    <img
-                      className="dataPatient__img"
-                      src={patient.img}
-                      alt={patient.name}
-                    />
+                    <img className="dataPatient__img" src={patient.img} alt={patient.name} />
                   </div>
                   <p className="dataPatient__p">
                     Nombre: <span>{patient.name}</span>
@@ -171,10 +148,7 @@ const DatosPersonales = () => {
                   <p className="dataPatient__p">
                     Fecha de nacimiento: <span>{patient.birth_date}</span>
                   </p>
-                  <button
-                    className="primary_button"
-                    onClick={() => setEdit(true)}
-                  >
+                  <button className="primary_button" onClick={() => setEdit(true)}>
                     Editar
                   </button>
                 </div>
@@ -185,19 +159,12 @@ const DatosPersonales = () => {
       )}
       {edit && (
         <div className="personalData">
-          <form
-            className="personalData__form"
-            onSubmit={handleSubmit(editPatientData)}
-          >
+          <form className="personalData__form" onSubmit={handleSubmit(editPatientData)}>
+            <h3>Datos personales</h3>
             <label htmlFor="img" className="primary_button">
               <p className="fakeButton">Foto de perfil</p>
             </label>
-            <input
-              type="file"
-              name="img"
-              id="img"
-              {...register("img")}
-            />
+            <input type="file" name="img" id="img" {...register("img")} />
 
             <label>
               Nombre
@@ -206,22 +173,12 @@ const DatosPersonales = () => {
 
             <label>
               Apellidos
-              <input
-                type="text"
-                name="surname"
-                id="surname"
-                {...register("surname")}
-              />
+              <input type="text" name="surname" id="surname" {...register("surname")} />
             </label>
 
             <label>
               Teléfono:
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                {...register("phone")}
-              />
+              <input type="number" name="phone" id="phone" {...register("phone")} />
             </label>
 
             <label>
@@ -249,12 +206,7 @@ const DatosPersonales = () => {
 
             <label>
               Fecha de nacimiento:
-              <input
-                type="text"
-                name="birth_date"
-                id="birth_date"
-                {...register("birth_date")}
-              />
+              <input type="text" name="birth_date" id="birth_date" {...register("birth_date")} />
             </label>
 
             <button className="primary_button" type="submit">
