@@ -1,0 +1,145 @@
+@import "Schema.scss";
+
+.personalData__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    margin: 20px auto;
+  }
+
+.personalData{
+    font-size: $generalFont;
+      margin: 0 auto;
+      font-size: 16px;
+      width: 50vw;
+      min-width: 300px;
+      height: 555px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+
+    @include tablet {
+        width: 500px;
+      }
+
+      
+      
+      &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(50vw - 5px);
+        min-width: 295px;
+        height: 550px;
+        background-color: $background-color;
+        z-index: 2;
+        border-radius: 25px;
+        
+        input {
+          width: 100%;
+          min-width: 35vw;
+          border: 2px solid $base-color;
+          border-radius: 8px;
+          background-color: $background-color;
+    
+          @include tablet {
+            min-width: unset;
+          }
+
+          &[type="file"] {
+            display: none;
+          }
+
+        }
+
+        select{
+            margin: 0.8em 0;
+            border-radius: 8px;
+            border: 2px solid $base-color;
+            background-color: $background-color;
+          }
+
+          .fakeButton{
+            font-size: 0.9em;
+            padding: 0.2em 0em;
+            color: black;
+            margin-left: -1em;
+            margin-right: -1em;
+            }
+        
+            .fakeButton:hover{
+              color: white;
+            }
+      h3 {
+        font-size: 2em;
+        padding-top: 0.7em;
+        padding-bottom: 0.5em;
+      }
+  
+      p {
+        padding: 0.2em 0;
+      }
+  
+      label {
+        font-size: 1.2em;
+        padding-bottom: 0.5em;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90px;
+        justify-content: space-between;
+  
+        @include tablet {
+          font-size: 1em;
+        }
+      }
+    }
+}
+.dataPatient{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__card {
+    display: flex;
+    border-radius: 16px;
+    margin: 20px 0;
+    border: 3px solid $base-color;
+    width: 370px;
+    height: 500px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__p{
+    line-height: 2em;
+  }
+
+  &__container--img {
+    width: 190px;
+    height: 190px;
+    margin: 10px;
+    object-fit: cover;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  span{
+    color: $base-color;
+    font-weight: bold;
+  }
+}
+

@@ -14,7 +14,7 @@
   font-size: 16px;
   width: 50vw;
   min-width: 300px;
-  height: 380px;
+  height: 405px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -24,8 +24,14 @@
   overflow: hidden;
   border-radius: 25px;
 
+  &__form--register{
+    h2{
+      padding-top: 0.5em !important;
+    }
+  } 
+
   @include tablet {
-    width: 380px;
+    width: 405px;
   }
 
   &__form {
@@ -35,17 +41,15 @@
     align-items: center;
     width: calc(50vw - 5px);
     min-width: 295px;
-    height: 375px;
+    height: 400px;
     background-color: $background-color;
     z-index: 2;
     border-radius: 25px;
 
     @include tablet {
-      width: 375px;
+      width: 400px;
     }
-   &__form--register{
-      height: 380px !important;
-    } 
+
     h2 {
       font-size: 2em;
       padding-top: 1em;
