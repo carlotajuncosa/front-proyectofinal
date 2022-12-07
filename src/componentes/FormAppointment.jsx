@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { newAppointment } from "../redux/appointments/appointments.actions";
 
-const FormAppointment = () => {
+const FormAppointment = ({ changeOption }) => {
   
   const { user } = useSelector((state) => state.auth);
 
@@ -20,7 +20,7 @@ const FormAppointment = () => {
 
   const newAppointments = (data) => {
     document.getElementById('appointment').reset();
-    dispatch(newAppointment(data, navigate));
+    dispatch(newAppointment(data, navigate, changeOption));
   };
 
   return (
@@ -42,7 +42,7 @@ const FormAppointment = () => {
           {...register("specialty", {
             required: true,
           })}>
-            <option disabled selected value> -- selecciona una opción -- </option>
+            <option disabled selected value>selecciona una opción</option>
             <option id="specialty">Cardiología</option>
             <option id="specialty">Traumatología</option>
             <option id="specialty">Dermatología</option>
@@ -64,7 +64,7 @@ const FormAppointment = () => {
             })}>
             <option disabled selected value>
               {" "}
-              -- selecciona una opción --{" "}
+              selecciona una opción {" "}
             </option>
             <option id="modality">Presencial</option>
             <option id="modality">Telefónica</option>

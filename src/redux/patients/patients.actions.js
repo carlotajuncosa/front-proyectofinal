@@ -37,9 +37,13 @@ export const getPatients = () => async (dispatch) => {
   export const newPatient = (formdata, navigate) => async (dispatch) => {
     dispatch({ type: "new_patients_start" });
     try {
-      const result = await API2.post("patients/create", formdata);
-      dispatch({ type: "new_patients_ok" });
-      // navigate("/area-cliente");
+      const res = await API2.post("patients/create", formdata);
+      try {
+        const result = await API.get("patients/byUser");
+        dispatch({ type: "getPatients", payload: result.data });
+      } catch (error) {
+        dispatch({ type: "errorPatients", payload: error.message });
+      }
     } catch (error) {
       dispatch({ type: "new_patients_error" });
     }

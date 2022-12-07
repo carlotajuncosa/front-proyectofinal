@@ -6,7 +6,7 @@
   width: 50vw;
   min-width: 300px;
   max-width: 505px;
-  height: 500px;
+  height: 600px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -18,10 +18,10 @@
 
   @include tablet {
     width: 600px;
-    height: 380px;
+    height: 600px;
   }
 
-  form {
+  &__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,29 +29,31 @@
     width: calc(50vw - 5px);
     min-width: 295px;
     max-width: 500px;
-    height: 495px;
+    height: 595px;
     background-color: $background-color;
     z-index: 2;
     border-radius: 25px;
 
     @include tablet {
       width: 595px;
-      height: 375px;
+      height: 595px;
     }
 
     h2 {
       font-size: 1.5em;
-      padding: 0.5em 0.2em 0;
+      padding: 0.7em 0.2em;
+      line-height: 1.3em;
     }
     h3 {
       font-size: 0.8em;
-      padding: 0.5em;
+      padding: 0.7em 2.5em;
     }
 
     label {
       font-size: 1.2em;
-      padding: 0.2em 0;
+      padding: 0.8em 0;
       font-weight: 600;
+      width: 35vw;
 
       @include tablet {
         font-size: 1em;
@@ -61,6 +63,9 @@
     input {
       width: 50%;
       min-width: 35vw;
+      border: 2px solid $base-color;
+      border-radius: 8px;
+      background-color: $background-color;
 
       @include tablet {
         min-width: unset;
@@ -69,6 +74,11 @@
     textarea {
       width: 50%;
       min-width: 35vw;
+      border-radius: 16px;
+      border: 2px solid $base-color;  
+      background-color: $background-color;
+
+
 
       @include tablet {
         min-width: unset;
@@ -86,14 +96,14 @@
   width: 50vw;
   min-width: 300px;
   max-width: 500px;
-  height: 500px;
+  height: 600px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
   animation: formAnimate 8s linear infinite;
 
   @include tablet {
     width: 600px;
-    height: 380px;
+    height: 600px;
   }
 }
 
@@ -106,7 +116,7 @@
   width: 50vw;
   min-width: 300px;
   max-width: 500px;
-  height: 500px;
+  height: 600px;
   transform-origin: bottom right;
   background: linear-gradient(0deg, transparent, $base-color, $base-color);
   animation: formAnimate 8s linear infinite;
@@ -114,7 +124,7 @@
 
   @include tablet {
     width: 600px;
-    height: 380px;
+    height: 600px;
   }
 }
 
@@ -127,3 +137,4 @@
     transform: rotate(360deg);
   }
 }
+

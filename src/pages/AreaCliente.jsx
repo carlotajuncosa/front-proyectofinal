@@ -21,7 +21,7 @@ const AreaCliente = () => {
           <NavbarCliente changeOption={changeOption}/>
           {option === "Citas" && <Appointments />}
           {option === "DatosPersonales" && <DatosPersonales />}
-          {option === "PedirCita" && <PedirCita hide={"true"}/>}
+          {option === "PedirCita" && <PedirCita hide={"true"} changeOption={changeOption}/>}
 
         </div>
       )}

@@ -5,6 +5,7 @@ import FormContact from '../componentes/FormContact';
 import Map from '../componentes/Map';
 import { getDoctors } from '../redux/doctors/doctors.actions';
 import "../styles/CuadroMedico.scss";
+import Loader from '../componentes/Loader';
 
 const CuadroMedico = () => {
 
@@ -33,6 +34,9 @@ const CuadroMedico = () => {
   return (
     <div className='medicalChart'>
       <h2 className='title'>Cuadro Médico</h2>
+      {isLoading && (
+        <Loader />    
+      )}
       <>
         {!isLoading && (
           <div className='doctor'>

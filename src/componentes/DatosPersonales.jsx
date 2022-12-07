@@ -35,7 +35,7 @@ const DatosPersonales = () => {
 
   return (
     <div>
-      {/* {!patients && ( */}
+      {!patients || patients.length <= 0 && (
         <>
           <form className="personalData__form" onSubmit={handleSubmit(createNewPatient)}>
             <h3>Introduzca sus datos personales</h3>
@@ -78,10 +78,10 @@ const DatosPersonales = () => {
               Enviar
             </button>
           </form>
-        </>
-      {patients && (
+        </>)}
+      {patients.length > 0 && (
         <>
-          {patients.map((patient) => {
+        {patients.map((patient) => {
             return (
               <div>
               <h1>DATOS</h1>
